@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Natalia Guzhova](https://up.htmlacademy.ru/adaptive/12/user/242302).
-* Наставник: `Maksym Syomushkin`.
+* Наставник: [Maksym Syomushkin] (https://htmlacademy.ru/profile/id48647).
 
 ---
 
