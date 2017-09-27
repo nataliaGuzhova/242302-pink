@@ -31,7 +31,7 @@
     </header>
 
     <main class="page-main">
-      <h1 class="visually-hidden">Пинк - приложение для обмена и редактирования фотографий</h1>
+      <h1 class="visually-hidden">Пинк - приложение для редактирования фотографий</h1>
 
       <section class="markets">
         <h2 class="visually-hidden">Приложение в маркетах</h2>
@@ -88,7 +88,7 @@
 
         <div class="slider">
           <ul class="reviews__list slider__list">
-            <li class="reviews__item slider__item">
+            <li class="reviews__item slider__item slider__item--review-1">
               <cite class="reviews__author">Николай Петров</cite>
 
               <blockquote class="reviews__text">Это приложение перевернуло мой мир
@@ -112,28 +112,31 @@
       <section class="price">
         <h2 class="visually-hidden">Тарифы</h2>
 
-        <div class="slider">
-          <table class="price__list">
-            <tr class="price__header">
-              <th class="price__title" colspan="2">Стандарт</th>
-            </tr>
-            <tr class="price__header">
-              <th class="price__title" colspan="2">3,99 USD</th>
-            </tr>
+        <div class="price__content slider">
+          <!-- Пока вообще не понимаю как верстать этот блок как слайдер, с учетом того что на полях видны соседние ячейки таблицы -->
+          <div class="price__table slider__item slider__item--rate-1">
+            <table class="price__list">
+              <tr class="price__header">
+                <th class="price__title" colspan="2">Стандарт</th>
+              </tr>
+              <tr class="price__header">
+                <th class="price__title" colspan="2">3,99 USD</th>
+              </tr>
 
-            <tr class="price__feature">
-              <th class="price__name">Розовый фильтр</th>
-              <th class="price__value">Да</th>
-            </tr>
-            <tr class="price__feature">
-              <th class="price__name">Смайлики</th>
-              <th class="price__value">Да</th>
-            </tr>
-            <tr class="price__feature">
-              <th class="price__name">Комментарии</th>
-              <th class="price__value">Нет</th>
-            </tr>
-          </table>
+              <tr class="price__feature">
+                <th class="price__name">Розовый фильтр</th>
+                <th class="price__value">Да</th>
+              </tr>
+              <tr class="price__feature">
+                <th class="price__name">Смайлики</th>
+                <th class="price__value">Да</th>
+              </tr>
+              <tr class="price__feature">
+                <th class="price__name">Комментарии</th>
+                <th class="price__value">Нет</th>
+              </tr>
+            </table>
+          </div>
 
           <input class="price__control slider__control" type="radio" id="rate-1" value="rate-1">
           <input class="price__control slider__control" type="radio" id="rate-2" value="rate-2" checked>
