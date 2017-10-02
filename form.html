@@ -6,7 +6,7 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo-link" href="index.html">
+      <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-image" src="http://placehold.it/150x100" width="150" height="100" alt="Приложение Пинк">
       </a>
 
@@ -15,16 +15,16 @@
 
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="index.html">Главная</a>
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="photo.html">Фотографии</a>
+            <a class="main-nav__link" href="photo.html">Фотографии</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__item-link">Конкурс</a>
+            <a class="main-nav__link">Конкурс</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">Html academy</a>
+            <a class="main-nav__link" href="#">Html academy</a>
           </li>
         </ul>
       </nav>
@@ -37,7 +37,7 @@
         ценный приз — 1000 миль на вашу бонусную карту!</p>
 
       <form class="main-page__form form" action="action-page.html" method="post">
-        <fieldset class="form__username">
+        <fieldset class="form__fieldset">
           <label class="form__label" for="surname">Фамилия:</label>
           <input class="form__text" type="text" id="surname" placeholder="Укажите фамилию*" required>
 
@@ -48,8 +48,8 @@
           <input class="form__text" type="text" id="patronymic" placeholder="Ну и отчество тоже*" required>
         </fieldset>
 
-        <fieldset class="form__achievements">
-          <legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
 
           <input class="form__checkbox" type="checkbox" id="selfie" name="selfie" value="selfie" checked>
           <label class="form__label form__label--checkbox" for="selfie">Сделал селфи с акулой</label>
@@ -70,16 +70,16 @@
           <label class="form__label form__label--checkbox" for="destroyed">Разгромил отель</label>
         </fieldset>
 
-        <fieldset class="form__contacts">
+        <fieldset class="form__fieldset">
           <label class="form__label" for="phone">Номер телефона</label>
-          <input class="form__text" type="tel" id="phone" placeholder="Номер, пожалуйста">
+          <input class="form__text" type="tel" id="phone" name="tel" placeholder="Номер, пожалуйста">
 
           <label class="form__label" for="email">адрес почты</label>
-          <input class="form__text" type="email" id="email" placeholder="Введите почту *" required>
+          <input class="form__text" type="email" id="email" name="email" placeholder="Введите почту *" required>
         </fieldset>
 
-        <fieldset class="form__app">
-          <legend class="form__title">С каким приложением путешествовали?</legend>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">С каким приложением путешествовали?</legend>
 
           <input class="form__radio" type="radio" id="iOs" name="app" value="iOs" checked>
           <label class="form__label form__label--radio" for="iOs">Pink для iOS</label>
@@ -91,10 +91,10 @@
           <label class="form__label form__label--radio" for="windows">Windows Phone</label>
         </fieldset>
 
-        <fieldset class="form__message">
-          <legend class="form__title">Опишите свои эмоции</legend>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Опишите свои эмоции</legend>
 
-          <textarea class="form__textarea">Можно прям в красках, не стесняясь в выражениях</textarea>
+          <textarea class="form__textarea" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </fieldset>
 
         <button class="form__submit button" type="submit">Отправить форму</button>
@@ -107,29 +107,26 @@
       <a class="page-footer__logo-link" href="#">
         <img class="page-footer__logo-image" src="http://placehold.it/150x100" width="150" height="100" alt="Приложение Пинк">
       </a>
+<!-- Почему не нужен секшн и достаточно списка. Холивар? -->
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--twitter">Твиттер</a>
+        </li>
 
-      <section class="page-footer__social social">
-        <h2 class="visually-hidden">Социальные сети</h2>
+        <li class="social__item">
+          <a class="social__link social__link--facebook">Фейсбук</a>
+        </li>
 
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--twitter">Твиттер</a>
-          </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube">Ютюб</a>
+        </li>
+      </ul>
 
-          <li class="social__item">
-            <a class="social__link social__link--facebook">Фейсбук</a>
-          </li>
-
-          <li class="social__item">
-            <a class="social__link social__link--youtube">Ютюб</a>
-          </li>
-        </ul>
-      </section>
-
-      <span class="page-footer__text">Разработано</span>
-      <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="page-footer__image" src="http://placehold.it/150x100" width="150" height="100" alt="Html academy">
-      </a>
+      <p class="page-footer__text">Разработано
+        <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="page-footer__image" src="http://placehold.it/150x100" width="150" height="100" alt="Html academy">
+        </a>
+      </p>
     </footer>
   </body>
 </html>

@@ -6,7 +6,7 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo-link" href="index.html">
+      <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-image" src="http://placehold.it/150x100" width="150" height="100" alt="Приложение Пинк">
       </a>
 
@@ -15,16 +15,16 @@
 
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="index.html">Главная</a>
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__item-link">Фотографии</a>
+            <a class="main-nav__link">Фотографии</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">Конкурс</a>
+            <a class="main-nav__link" href="#">Конкурс</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">Html academy</a>
+            <a class="main-nav__link" href="#">Html academy</a>
           </li>
         </ul>
       </nav>
@@ -33,159 +33,213 @@
     </header>
 
     <main class="main-page">
-      <p class="main-page__text">Взгляните на фотографии, которые выкладывают пользователи!
-        Видите, как не хватает ваших?</p>
-<!-- [В] Стоит ли галлерею оформить списком? -->
+<!-- [В] Почему список? И почему так лучше, легче позиционировать?:) -->
       <section class="gallery">
         <h2 class="visually-hidden">Галлерея фотографий пользователей</h2>
 
-        <article class="gallery__item photo">
-          <h3 class="visually-hidden">Панорама</h3>
+        <p class="gallery__text">Взгляните на фотографии, которые выкладывают пользователи!
+          Видите, как не хватает ваших?</p>
 
-          <a class="photo__link" href="#">
-            <img class="photo__image" src="http://placehold.it/150x100" width="150" height="100" alt="Панорама">
-          </a>
+        <ul class="gallery__list">
+          <li class="gallery__item">
+            <article class="gallery__photo photo">
+              <!-- [] Валидатор ругается предупреждением на несколько h1 на странице-->
+              <h1 class="visually-hidden">Панорама</h1>
 
-          <cite class="photo__author">Анна</cite>
-          <time class="photo__time" datetime="2017-09-27">(5 минут назад)</time>
+              <a class="photo__image" href="#">
+                <img src="http://placehold.it/150x100" width="150" height="100" alt="Панорама">
+              </a>
 
-          <blockquote class="photo__description">Прыгать или нет? Напишите в коментарии
-            свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</blockquote>
+              <blockquote class="photo__description">
+                <cite class="photo__author">Анна</cite>
+                <time class="photo__time" datetime="2017-09-27">(5 минут назад)</time>
 
-          <span class="photo__like">Нравится: 215</span>
-        </article>
+                <p class="photo__text">Прыгать или нет? Напишите в коментарии
+                  свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+               </blockquote>
 
-        <article class="gallery__item photo">
-          <h3 class="visually-hidden">Авто</h3>
+              <p class="photo__like like">
+                <button class="like__button" type="button"></button>
+                <span class="like__text">Нравится: 215</span>
+              </p>
+            </article>
+          </li>
 
-          <a class="photo__link" href="#">
-            <img class="photo__image" src="http://placehold.it/150x100" width="150" height="100" alt="Авто">
-          </a>
+          <li class="gallery__item">
+            <article class="gallery__photo photo">
+              <h1 class="visually-hidden">Авто</h1>
 
-          <cite class="photo__author">Левон</cite>
-          <time class="photo__time" datetime="2017-09-27">(5 часов назад)</time>
+              <a class="photo__image" href="#">
+                <img src="http://placehold.it/150x100" width="150" height="100" alt="Авто">
+              </a>
 
-          <blockquote class="photo__description">Вчера он на луну летал, сегодня в руки к нам попал.</blockquote>
+              <blockquote class="photo__description">
+                <cite class="photo__author">Левон</cite>
+                <time class="photo__time" datetime="2017-09-27">(5 часов назад)</time>
 
-          <span class="photo__like">Нравится: 356</span>
-        </article>
+                <p class="photo__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              </blockquote>
 
-        <article class="gallery__item photo">
-          <h3 class="visually-hidden">Барабаны</h3>
+              <p class="photo__like like">
+                <button class="like__button" type="button"></button>
+                <span class="like__text">Нравится: 356</span>
+              </p>
+            </article>
+          </li>
 
-          <a class="photo__link" href="#">
-            <img class="photo__image" src="http://placehold.it/150x100" width="150" height="100" alt="Барабаны">
-          </a>
+          <li class="gallery__item">
+            <article class="gallery__photo photo">
+              <h1 class="visually-hidden">Барабаны</h1>
 
-          <cite class="photo__author">Антон</cite>
-          <time class="photo__time" datetime="2017-09-27">(12 часов назад)</time>
+              <a class="photo__image" href="#">
+                <img src="http://placehold.it/150x100" width="150" height="100" alt="Барабаны">
+              </a>
 
-          <blockquote class="photo__description">Соседи будут рады!</blockquote>
+              <blockquote class="photo__description">
+                <cite class="photo__author">Антон</cite>
+                <time class="photo__time" datetime="2017-09-27">(12 часов назад)</time>
 
-          <span class="photo__like">Нравится: 666</span>
-        </article>
+                <p class="photo__text">Соседи будут рады!</p>
+              </blockquote>
 
-        <article class="gallery__item photo">
-          <h3 class="visually-hidden">Небо</h3>
+              <p class="photo__like like">
+                <button class="like__button" type="button"></button>
+                <span class="like__text">Нравится: 666</span>
+              </p>
+            </article>
+          </li>
 
-          <a class="photo__link" href="#">
-            <img class="photo__image" src="http://placehold.it/150x100" width="150" height="100" alt="Небо">
-          </a>
+          <li class="gallery__item">
+            <article class="gallery__photo photo">
+              <h1 class="visually-hidden">Небо</h1>
 
-          <cite class="photo__author">Борис</cite>
-          <time class="photo__time" datetime="2017-09-27">(20 часов назад)</time>
+              <a class="photo__image" href="#">
+                <img src="http://placehold.it/150x100" width="150" height="100" alt="Небо">
+              </a>
 
-          <blockquote class="photo__description">Здесь могла быть ваша цитата о высоком и вечном.</blockquote>
+              <blockquote class="photo__description">
+                <cite class="photo__author">Борис</cite>
+                <time class="photo__time" datetime="2017-09-27">(20 часов назад)</time>
 
-          <span class="photo__like">Нравится: 215</span>
-        </article>
+                <p class="photo__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              </blockquote>
 
-        <article class="gallery__item photo">
-          <h3 class="visually-hidden">Бахча</h3>
+              <p class="photo__like like">
+                <button class="like__button" type="button"></button>
+                <span class="like__text">Нравится: 215</span>
+              </p>
+            </article>
+          </li>
 
-          <a class="photo__link" href="#">
-            <img class="photo__image" src="http://placehold.it/150x100" width="150" height="100" alt="Бахча">
-          </a>
+          <li class="gallery__item">
+            <article class="gallery__photo photo">
+              <h1 class="visually-hidden">Бахча</h1>
 
-          <cite class="photo__author">Сергей</cite>
-          <time class="photo__time" datetime="2017-09-27">(25 часов назад)</time>
+              <a class="photo__image" href="#">
+                <img src="http://placehold.it/150x100" width="150" height="100" alt="Бахча">
+              </a>
 
-          <blockquote class="photo__description">Самая кубанская в мире!</blockquote>
+              <blockquote class="photo__description">
+                <cite class="photo__author">Сергей</cite>
+                <time class="photo__time" datetime="2017-09-27">(25 часов назад)</time>
 
-          <span class="photo__like">Нравится: 4</span>
-        </article>
+                <p class="photo__text">Самая кубанская в мире!</p>
+              </blockquote>
 
-        <article class="gallery__item photo">
-          <h3 class="visually-hidden">В поисках снега</h3>
+              <p class="photo__like like">
+                <button class="like__button" type="button"></button>
+                <span class="like__text">Нравится: 4</span>
+              </p>
+            </article>
+          </li>
 
-          <a class="photo__link" href="#">
-            <img class="photo__image" src="http://placehold.it/150x100" width="150" height="100" alt="В поисках снега">
-          </a>
+          <li class="gallery__item">
+            <article class="gallery__photo photo">
+              <h1 class="visually-hidden">В поисках снега</h1>
 
-          <cite class="photo__author">Максим</cite>
-          <time class="photo__time" datetime="2017-09-27">(40 часов назад)</time>
+              <a class="photo__image" href="#">
+                <img src="http://placehold.it/150x100" width="150" height="100" alt="В поисках снега">
+              </a>
 
-          <blockquote class="photo__description">Где снег-то?</blockquote>
+              <blockquote class="photo__description">
+                <cite class="photo__author">Максим</cite>
+                <time class="photo__time" datetime="2017-09-27">(40 часов назад)</time>
 
-          <span class="photo__like">Нравится: 150</span>
-        </article>
+                <p class="photo__description">Где снег-то?</p>
+              </blockquote>
 
-        <article class="gallery__item photo">
-          <h3 class="visually-hidden">Закат</h3>
+              <p class="photo__like like">
+                <button class="like__button" type="button"></button>
+                <span class="like__text">Нравится: 150</span>
+              </p>
+            </article>
+          </li>
 
-          <a class="photo__link" href="#">
-            <img class="photo__image" src="http://placehold.it/150x100" width="150" height="100" alt="Закат">
-          </a>
+          <li class="gallery__item">
+            <article class="gallery__photo photo">
+              <h1 class="visually-hidden">Закат</h1>
 
-          <cite class="photo__author">Надежда</cite>
-          <time class="photo__time" datetime="2017-09-27">(45 часов назад)</time>
+              <a class="photo__image" href="#">
+                <img src="http://placehold.it/150x100" width="150" height="100" alt="Закат">
+              </a>
 
-          <blockquote class="photo__description">Всем GM и взаимные лайки!</blockquote>
+              <blockquote class="photo__description">
+                <cite class="photo__author">Надежда</cite>
+                <time class="photo__time" datetime="2017-09-27">(45 часов назад)</time>
 
-            <span class="photo__like">Нравится: 2560</span>
-        </article>
+                <p class="photo__text">Всем GM и взаимные лайки!</p>
+              </blockquote>
+
+              <p class="photo__like like">
+                <button class="like__button" type="button"></button>
+                <span class="like__text">Нравится: 2560</span>
+              </p>
+            </article>
+          </li>
+        </ul>
       </section>
-
-      <p class="main-page__text">Затмите их всех!<br>
-        Выкладывайте все, что накопилось в телефоне!</p>
 
       <section class="editor">
         <h2 class="visually-hidden">Редактор фотографий</h2>
 
-        <img class="editor__image" src="http://placehold.it/150x100" width="150" height="100" alt="Дорога">
-<!-- [Вопрос] Не очень понимаю как инструменты верстать - слайдер или список или что к чему?:)-->
-        <input class="editor__control slider__control" type="radio" id="crop" name="editor__control" value="crop">
-        <input class="editor__control slider__control" type="radio" id="fill" name="editor__control" value="fill">
-        <input class="editor__control slider__control" type="radio" id="tool-3" name="editor__control" value="tool-3">
+        <p class="main-page__text">Затмите их всех!<br>
+          Выкладывайте все, что накопилось в телефоне!</p>
 
-        <div class="price__toggles slider__toggles">
-          <label class="price__toggle price__toggle--active slider__toggle slider__toggle--active" for="crop">Обрезать</label>
-          <label class="price__toggle slider__toggle" for="fill">Изменить цвет</label>
-          <label class="price__toggle slider__toggle" for="tool-3">NoN</label>
-        </div>
+        <form class="editor__form" action="action-page.html" method="get">
+          <img class="editor__image" src="http://placehold.it/150x100" width="150" height="100" alt="Дорога">
 
-        <ul class="editor__tools">
-          <li class="editor__item editor__item--crop">
-            <div class="editor__scale">
-              <div class="editor__toggle"></div>
-            </div>
-          </li>
+          <ul class="editor__tools">
+            <li class="editor__item editor__item--crop">
+              <input class="editor__control" type="radio" id="crop" name="editor_control" value="crop">
+              <label class="editor__tab editor__tab--active" for="crop">Обрезать</label>
 
-          <li class="editor__item editor__item--trim">
-            <div class="editor__scale">
-              <div class="editor__toggle"></div>
-            </div>
-          </li>
+              <div class="editor__scale">
+                <div class="editor__toggle"></div>
+              </div>
+            </li>
 
-          <li class="editor__item editor__item--trim">
-            <div class="editor__scale">
-              <div class="editor__toggle"></div>
-            </div>
-          </li>
-        </ul>
+            <li class="editor__item editor__item--fill">
+              <input class="editor__control" type="radio" id="fill" name="editor_control" value="fill">
+              <label class="editor__tab" for="fill">Изменить цвет</label>
 
-        <button class="editor__submit button" type="submit">Запостить</button>
-        <button class="editor__reset button" type="reset">Отмена</button>
+              <div class="editor__scale">
+                <div class="editor__toggle"></div>
+              </div>
+            </li>
+
+            <li class="editor__item editor__item--tool-3">
+              <input class="editor__control" type="radio" id="tool-3" name="editor_control" value="tool-3">
+              <label class="editor__tab" for="tool-3">NoN</label>
+
+              <div class="editor__scale">
+                <div class="editor__toggle"></div>
+              </div>
+            </li>
+          </ul>
+
+          <button class="editor__submit button" type="submit">Запостить</button>
+          <button class="editor__reset button" type="reset">Отмена</button>
+        </form>
       </section>
     </main>
 
