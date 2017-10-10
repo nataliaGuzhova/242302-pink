@@ -1,0 +1,33 @@
+.editor {
+  .set-background (@color: @neutral-color);
+
+  &__tools {
+    .reset-indent ();
+    padding: 30px 10px;
+    list-style: none;
+  }
+
+  &__scale {
+    margin: 25px 0;
+    .block-size (280px; 2px);
+    position: relative;
+    background-color: rgb(0, 0, 0);
+  }
+
+  &__toggle {
+    display: inline-block;
+    .block-pos-absolute (14px; 14px; -7px; 10px);
+    .set-border (2px; @select-color; @radius: 50%);
+    background-color: @neutral-color;
+  }
+
+  &__fieldset {
+    border: none;
+    border-top: 2px rgb(221, 223, 224) solid;
+    padding: 40px 0 28px;
+  }
+
+  &__button {
+    margin-bottom: 12px;
+  }
+}

@@ -1,0 +1,26 @@
+.photo {
+  .set-background (@color: @neutral-color);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+
+  &__description {
+    .reset-indent ();
+    padding: 15px;
+  }
+
+  &__author {
+    .set-font (@font-weight: bold);
+  }
+
+  &__time {
+    .set-font (@size: 12px; @text-transform: uppercase);
+  }
+
+  &__text {
+    .reset-indent ();
+  }
+
+  &__like {
+    .reset-indent ();
+  }
+}

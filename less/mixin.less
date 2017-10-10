@@ -1,0 +1,44 @@
+.set-background(@color: @light-background-color; @image: none; @repeat: @default-background-repeat; @background-position: 0% 0%) {
+  background-color: @color;
+  background-image+: @image;
+  background-repeat+: @repeat;
+  background-position+: @background-position;
+}
+
+.set-font (@size: @font-size; @line-height: @line-height; @font-family: @font-family; @font-weight: @font-weight; @color: @dark-font-color; @text-transform: none; @text-decoration: none; @font-style: normal) {
+  font-size: @size;
+  line-height: @line-height;
+  font-family: @font-family;
+  font-weight: @font-weight;
+  color: @color;
+  text-transform: @text-transform;
+  text-decoration: @text-decoration;
+  font-style: @font-style;
+}
+
+.set-border (@width: 3px; @color: @light-background-color; @style: solid; @radius: 0) {
+  border-width: @width;
+  border-color: @color;
+  border-style: @style;
+  border-radius: @radius;
+}
+
+.set-border-color (@color: @light-background-color;) {
+  border-color: @color;
+}
+
+.reset-indent () {
+  padding: 0;
+  margin: 0;
+}
+
+.block-size (@width: auto; @height: auto) {
+  width: @width;
+  height: @height;
+}
+
+.block-pos-absolute (@width: auto; @height: auto; @top: 0; @left: 0) {
+  .block-size (@width; @height);
+  top: @top;
+  left: @left;
+}

@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк - конкурс</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="http://placehold.it/150x100" width="150" height="100" alt="Приложение Пинк">
+        <img class="page-header__logo-image" src="./img/logo-pink-white-mobile.svg" width="74" height="22" alt="Приложение Пинк">
       </a>
 
       <nav class="main-nav">
@@ -32,11 +33,11 @@
       <h1 class="page-header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
     </header>
 
-    <main class="main-page">
-      <p class="main-page__text">Поделитесь своей историей и получите шанс выиграть
+    <main class="page-main">
+      <p class="page-main__text">Поделитесь своей историей и получите шанс выиграть
         ценный приз — 1000 миль на вашу бонусную карту!</p>
 
-      <form class="main-page__form form" action="action-page.html" method="post">
+      <form class="page-main__form form" action="action-page.html" method="post">
         <fieldset class="form__fieldset">
           <label class="form__label" for="surname">Фамилия:</label>
           <input class="form__text" type="text" id="surname" placeholder="Укажите фамилию*" required>
@@ -45,7 +46,7 @@
           <input class="form__text" type="text" id="name" placeholder="Введите ваше имя*" required>
 
           <label class="form__label" for="patronymic">Отчество:</label>
-          <input class="form__text" type="text" id="patronymic" placeholder="Ну и отчество тоже*" required>
+          <input class="form__text" type="text" id="patronymic" placeholder="Ну и отчество тоже" required>
         </fieldset>
 
         <fieldset class="form__fieldset">
@@ -94,13 +95,13 @@
         <fieldset class="form__fieldset">
           <legend class="form__legend">Опишите свои эмоции</legend>
 
-          <textarea class="form__textarea" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          <textarea class="form__textarea" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </fieldset>
 
-        <button class="form__submit button" type="submit">Отправить форму</button>
+        <button class="form__submit button button--form" type="submit">Отправить форму</button>
       </form>
 
-      <p class="main-page__form-comment"><span class="main-page__icon">*</span> — обязательные поля</p>
+      <p class="page-main__form-comment"><span class="page-main__icon">*</span> — обязательные поля</p>
       <!-- Вспылывающие блоки после отпарвки формы -->
       <div class="main-page__submit-result result-message">
         <h2 class="result-message__title">Ваша заявка отправлена</h2>
@@ -108,42 +109,47 @@
           уже поступила к нам. В ближайшее время мы рассмотрим ее и
           оповестим вас.</p>
 
-          <button class="result-message__close button" type="button">Закрыть окно</button>
+          <button class="result-message__close button button--form" type="button">Закрыть окно</button>
       </div>
 
-      <div class="main-page__submit-result result-message">
+      <div class="page-main__submit-result result-message">
         <h2 class="result-message__title">Что-то пошло не так!</h2>
         <p class="result-message__text">Проверьте поля, выделенные красным,
           скорее всего вы забыли их заполнить</p>
 
-          <button class="result-message__close button" type="button">Ок</button>
+          <button class="result-message__close button button--form" type="button">Ок</button>
       </div>
     </main>
 
     <footer class="page-footer">
-      <a class="page-footer__logo-link" href="#">
-        <img class="page-footer__logo-image" src="http://placehold.it/150x100" width="150" height="100" alt="Приложение Пинк">
+      <a class="page-footer__logo-link" href="index.html">
+        <img class="page-footer__logo-image" src="./img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Приложение Пинк">
       </a>
-<!-- Почему не нужен секшн и достаточно списка. Холивар? -->
+    <!-- Почему не нужен секшн и достаточно списка? -->
       <ul class="page-footer__social social">
         <li class="social__item">
-          <a class="social__link social__link--twitter">Твиттер</a>
+          <a class="social__link social__link--twitter">
+            <span class="visually-hidden">Твиттер</span>
+          </a>
         </li>
 
         <li class="social__item">
-          <a class="social__link social__link--facebook">Фейсбук</a>
+          <a class="social__link social__link--facebook">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
         </li>
 
         <li class="social__item">
-          <a class="social__link social__link--youtube">Ютюб</a>
+          <a class="social__link social__link--youtube">
+            <span class="visually-hidden">Ютюб</span>
+          </a>
         </li>
       </ul>
 
-      <p class="page-footer__text">Разработано
-        <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="page-footer__image" src="http://placehold.it/150x100" width="150" height="100" alt="Html academy">
-        </a>
-      </p>
+      <span class="page-footer__text">Разработано</span>
+      <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <img class="page-footer__image" src="./img/logo-htmlacademy.svg" width="26" height="34" alt="Html academy">
+      </a>
     </footer>
   </body>
 </html>

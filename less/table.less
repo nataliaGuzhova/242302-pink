@@ -1,0 +1,15 @@
+.table {
+  .set-background (@color: @light-background-color);
+  .set-font (@line-height: 30px; @color: @dark-font-color; @text-transform: uppercase);
+  border-collapse: collapse;
+
+  &__heading-cell {
+    .set-background (@color: @dark-background-color);
+    .set-font (18px; 30px; @color: @light-font-color);
+    border-bottom: none;
+    border-top: none;
+  }
+  &__heading-cell--rate {
+    font-weight: bold;
+  }
+}

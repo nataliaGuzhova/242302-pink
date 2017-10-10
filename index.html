@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header page-header--index">
       <a class="page-header__logo">
-        <img class="page-header__logo-image" src="http://placehold.it/150x100" width="150" height="100" alt="Приложение Пинк">
+        <img class="page-header__logo-image" src="./img/logo-pink-white-mobile.svg" width="74" height="22" alt="Приложение Пинк">
       </a>
 
       <nav class="main-nav">
@@ -37,17 +37,23 @@
       <section class="app-markets">
         <h2 class="visually-hidden">Приложение в маркетах</h2>
 
-        <a class="app-markets__main-link button" href="#">Скачать приложение</a>
+        <a class="app-markets__main-link button button--rounded" href="#">Скачать приложение</a>
 
         <ul class="app-markets__list">
-          <li class="app-markets__item markets__item--apple">
-            <a class="app-markets__link" href="#">iTunes</a>
+          <li class="app-markets__item">
+            <a class="app-markets__link markets__item--apple" href="#">
+              <span class="visually-hidden">iTunes</span>
+            </a>
           </li>
-          <li class="app-markets__item markets__item--android">
-            <a class="app-markets__link" href="#">Google Play</a>
+          <li class="app-markets__item">
+            <a class="app-markets__link markets__item--android" href="#">
+              <span class="visually-hidden">Google Play</span>
+            </a>
           </li>
-          <li class="app-markets__item markets__item--windows">
-            <a class="app-markets__link" href="#">Microsoft Store</a>
+          <li class="app-markets__item">
+            <a class="app-markets__link markets__item--windows" href="#">
+              <span class="visually-hidden">Microsoft Store</span>
+            </a>
           </li>
         </ul>
 
@@ -105,9 +111,15 @@
           <input class="reviews__control slider__control" type="radio" id="review-3" name="reviews__control" value="review-3">
 
           <div class="reviews__toggle-list slider__toggle-list">
-            <label class="reviews__toggle-item slider__toggle-item slider__toggle-item--active" for="review-1">Отзыв Николая Петрова</label>
-            <label class="reviews__toggle-item slider__toggle-item" for="review-2">Отзыв NoName</label>
-            <label class="reviews__toggle-item slider__toggle-item" for="review-3">Отзыв NoName</label>
+            <label class="reviews__toggle-item slider__toggle-item slider__toggle-item--active" for="review-1">
+              <span class="visually-hidden">Отзыв Николая Петрова</span>
+            </label>
+            <label class="reviews__toggle-item slider__toggle-item" for="review-2">
+              <span class="visually-hidden">Отзыв NoName</span>
+            </label>
+            <label class="reviews__toggle-item slider__toggle-item" for="review-3">
+              <span class="visually-hidden">Отзыв NoName</span>
+            </label>
           </div>
         </div>
       </section>
@@ -120,7 +132,7 @@
           <div class="price__table slider__item slider__item--rate-1">
             <table class="price__table table">
               <tr class="table__row">
-                <th class="table__heading-cell" colspan="2">Стандарт</th>
+                <th class="table__heading-cell table__heading-cell--rate" colspan="2">Стандарт</th>
               </tr>
               <tr class="table__row">
                 <th class="table__heading-cell" colspan="2">3,99 USD</th>
@@ -146,9 +158,15 @@
           <input class="price__control slider__control" type="radio" id="rate-3" name="price__control" value="rate-3">
 
           <div class="price__toggle-list slider__toggle-list">
-            <label class="price__toggle-item slider__toggle-item" for="rate-1">NoN</label>
-            <label class="price__toggle-item slider__toggle-item slider__toggle-item--active" for="rate-2">Стандарт</label>
-            <label class="price__toggle-item slider__toggle-item" for="rate-3">NoN</label>
+            <label class="price__toggle-item slider__toggle-item" for="rate-1">
+              <span class="visually-hidden">NoN</span>
+            </label>
+            <label class="price__toggle-item slider__toggle-item slider__toggle-item--active" for="rate-2">
+              <span class="visually-hidden">Стандарт</span>
+            </label>
+            <label class="price__toggle-item slider__toggle-item" for="rate-3">
+              <span class="visually-hidden">NoN</span>
+            </label>
           </div>
         </div>
       </section>
