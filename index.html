@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
-      <a class="page-header__logo-link">
-        <img class="page-header__logo-image" src="http://placehold.it/150x100" width="150" height="100" alt="Приложение Пинк">
+    <header class="page-header page-header--index">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="./img/logo-pink-white-mobile.svg" width="74" height="22" alt="Приложение Пинк">
       </a>
 
       <nav class="main-nav">
@@ -15,16 +16,16 @@
 
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__item-link">Главная</a>
+            <a class="main-nav__link">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="photo.html">Фотографии</a>
+            <a class="main-nav__link" href="photo.html">Фотографии</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="form.html">Конкурс</a>
+            <a class="main-nav__link" href="form.html">Конкурс</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">Html academy</a>
+            <a class="main-nav__link" href="#">Html academy</a>
           </li>
         </ul>
       </nav>
@@ -33,24 +34,30 @@
     <main class="page-main">
       <h1 class="visually-hidden">Пинк - приложение для редактирования фотографий</h1>
 
-      <section class="markets">
+      <section class="app-markets">
         <h2 class="visually-hidden">Приложение в маркетах</h2>
 
-        <a class="markets__main-link button" href="#">Скачать приложение</a>
+        <a class="app-markets__main-link button button--rounded" href="#">Скачать приложение</a>
 
-        <ul class="markets__list">
-          <li class="markets__item markets__item--apple">
-            <a class="markets__link" href="#">iTunes</a>
+        <ul class="app-markets__list">
+          <li class="app-markets__item">
+            <a class="app-markets__link markets__item--apple" href="#">
+              <span class="visually-hidden">iTunes</span>
+            </a>
           </li>
-          <li class="markets__item markets__item--android">
-            <a class="markets__link" href="#">Google Play</a>
+          <li class="app-markets__item">
+            <a class="app-markets__link markets__item--android" href="#">
+              <span class="visually-hidden">Google Play</span>
+            </a>
           </li>
-          <li class="markets__item markets__item--windows">
-            <a class="markets__link" href="#">Microsoft Store</a>
+          <li class="app-markets__item">
+            <a class="app-markets__link markets__item--windows" href="#">
+              <span class="visually-hidden">Microsoft Store</span>
+            </a>
           </li>
         </ul>
 
-        <p class="markets__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        <p class="app-markets__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </section>
 
       <section class="advantages">
@@ -61,23 +68,23 @@
 
         <ul class="advantages__list">
           <li class="advantages__item">
-            <h3 class="advantages_title">Поднимает настроение</h3>
+            <h3 class="advantages__title">Поднимает настроение</h3>
 
-            <p class="advantages_description">Приложение позволит вам победить
+            <p class="advantages__description">Приложение позволит вам победить
               осеннюю хандру и депрессию буквально в несколько кликов!</p>
           </li>
 
           <li class="advantages__item">
-            <h3 class="advantages_title">Меняет мир вокруг</h3>
+            <h3 class="advantages__title">Меняет мир вокруг</h3>
 
-            <p class="advantages_description">Сделайте снимок и украсьте его
+            <p class="advantages__description">Сделайте снимок и украсьте его
               смайликом или текстовой подписью, чтобы усилить эффект</p>
           </li>
 
           <li class="advantages__item">
-            <h3 class="advantages_title">Заводит новых друзей</h3>
+            <h3 class="advantages__title">Заводит новых друзей</h3>
 
-            <p class="advantages_description">Ставьте лайки, комментируйте,
+            <p class="advantages__description">Ставьте лайки, комментируйте,
                 делитесь фотографиями с друзьями и заводите новых</p>
           </li>
         </ul>
@@ -103,10 +110,16 @@
           <input class="reviews__control slider__control" type="radio" id="review-2" name="reviews__control" value="review-2">
           <input class="reviews__control slider__control" type="radio" id="review-3" name="reviews__control" value="review-3">
 
-          <div class="reviews__toggles slider__toggles">
-            <label class="slider__toggle slider__toggle--active" for="review-1">Отзыв Николая Петрова</label>
-            <label class="slider__toggle" for="review-2">Отзыв NoName</label>
-            <label class="slider__toggle" for="review-3">Отзыв NoName</label>
+          <div class="reviews__toggle-list slider__toggle-list">
+            <label class="reviews__toggle-item slider__toggle-item slider__toggle-item--active" for="review-1">
+              <span class="visually-hidden">Отзыв Николая Петрова</span>
+            </label>
+            <label class="reviews__toggle-item slider__toggle-item" for="review-2">
+              <span class="visually-hidden">Отзыв NoName</span>
+            </label>
+            <label class="reviews__toggle-item slider__toggle-item" for="review-3">
+              <span class="visually-hidden">Отзыв NoName</span>
+            </label>
           </div>
         </div>
       </section>
@@ -117,25 +130,25 @@
         <div class="price__content slider">
           <!-- Пока вообще не понимаю как верстать этот блок как слайдер, с учетом того что на полях видны соседние ячейки таблицы -->
           <div class="price__table slider__item slider__item--rate-1">
-            <table class="price__list">
-              <tr class="price__header">
-                <th class="price__title" colspan="2">Стандарт</th>
+            <table class="price__table table">
+              <tr class="table__row">
+                <th class="table__heading-cell table__heading-cell--rate" colspan="2">Стандарт</th>
               </tr>
-              <tr class="price__header">
-                <th class="price__title" colspan="2">3,99 USD</th>
+              <tr class="table__row">
+                <th class="table__heading-cell" colspan="2">3,99 USD</th>
               </tr>
 
-              <tr class="price__feature">
-                <th class="price__name">Розовый фильтр</th>
-                <th class="price__value">Да</th>
+              <tr class="table__row">
+                <td class="table__cell">Розовый фильтр</td>
+                <td class="table__cell">Да</td>
               </tr>
-              <tr class="price__feature">
-                <th class="price__name">Смайлики</th>
-                <th class="price__value">Да</th>
+              <tr class="table__row">
+                <td class="table__cell">Смайлики</td>
+                <td class="table__cell">Да</td>
               </tr>
-              <tr class="price__feature">
-                <th class="price__name">Комментарии</th>
-                <th class="price__value">Нет</th>
+              <tr class="table__row">
+                <td class="table__cell">Комментарии</td>
+                <td class="table__cell">Нет</td>
               </tr>
             </table>
           </div>
@@ -144,33 +157,47 @@
           <input class="price__control slider__control" type="radio" id="rate-2" name="price__control" value="rate-2" checked>
           <input class="price__control slider__control" type="radio" id="rate-3" name="price__control" value="rate-3">
 
-          <div class="price__toggles slider__toggles">
-            <label class="slider__toggle" for="rate-1">NoN</label>
-            <label class="slider__toggle slider__toggle--active" for="rate-2">Стандарт</label>
-            <label class="slider__toggle" for="rate-3">NoN</label>
+          <div class="price__toggle-list slider__toggle-list">
+            <label class="price__toggle-item slider__toggle-item" for="rate-1">
+              <span class="visually-hidden">NoN</span>
+            </label>
+            <label class="price__toggle-item slider__toggle-item slider__toggle-item--active" for="rate-2">
+              <span class="visually-hidden">Стандарт</span>
+            </label>
+            <label class="price__toggle-item slider__toggle-item" for="rate-3">
+              <span class="visually-hidden">NoN</span>
+            </label>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="page-footer">
-      <section class="contacts">
+      <section class="location">
         <h2 class="visually-hidden">Контакты</h2>
 
-        <p class="contacts__text">Остались вопросы? Свяжитесь с нами!</p>
+        <section class="location__contacts">
+          <h3 class="visually-hidden">Контакты для связи</h3>
 
-        <b class="contacts__title">Звоните:</b>
-        <span class="contacts__value">+7 (812) 555-66-66</span>
+          <p class="location__text">Остались вопросы? Свяжитесь с нами!</p>
 
-        <b class="contacts__title">Пишите:</b>
-        <span class="contacts__value">mail@htmlacademy.ru</span>
+          <dl class="location__list">
+            <dt class="location__item">Звоните:</dt>
+            <dd class="location__value">+7 (812) 555-66-66</dd>
 
-        <b class="contacts__title">Приезжайте в гости:</b>
-        <span class="contacts__value">ул. Большая Конюшенная, 19/8</span>
+            <dt class="location__item">Пишите:</dt>
+            <dd class="location__value">mail@htmlacademy.ru</dd>
 
-        <div class="contacts__map">
-          <img class="contacts__map-mini" src="http://placehold.it/150x100" width="150" height="100" alt="Офис разработки Пинк - Большая Конюшенная ул., 19">
-        </div>
+            <dt class="location__item">Приезжайте в гости:</dt>
+            <dd class="location__value">ул. Большая Конюшенная, 19/8</dd>
+          </dl>
+        </section>
+
+        <section class="location__map">
+          <h3 class="visually-hidden">Схема проезда</h3>
+
+          <img class="location__map-mini" src="http://placehold.it/150x100" width="150" height="100" alt="Офис разработки Пинк - Большая Конюшенная ул., 19">
+        </section>
       </section>
     </footer>
   </body>

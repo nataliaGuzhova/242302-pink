@@ -1,0 +1,16 @@
+.page-header {
+  text-align: center;
+  padding: 100px 0 85px;
+
+  .set-background(@color: @dark-background-color; @image: @header-background-image);
+
+  &--index {
+    .set-background(@color: @dark-background-color; @image: url("../img/iphone-hand-mobile@1x.png"));
+    .set-background(@color: @dark-background-color; @image: @header-background-image);
+  }
+
+  &__title {
+    .reset-indent ();
+    .set-font (24px; 1.2; @color: @light-font-color; @font-weight: lighter);
+  }
+}

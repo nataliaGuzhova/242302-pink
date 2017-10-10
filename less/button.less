@@ -1,0 +1,28 @@
+.button {
+  .reset-indent ();
+  display: block;
+  min-width: 280px;
+  .set-background (@color: transparent);
+  .set-font(18px; 18px; @color: inherit; @font-weight: bold);
+  text-align: center;
+  padding: 15px;
+
+  &--rounded {
+    .set-border (@radius: 30px);
+  }
+
+  &--submit {
+    .set-border-color (@color: @select-color);
+  }
+
+  &--reset {
+    opacity: 0.1;
+    .set-border-color (@color: @black-color);
+  }
+
+  &--form {
+    .set-background (@color: rgb(42, 171, 109););
+    .set-border (1px; @color: rgb(42, 171, 109); @radius: 2px;);
+    .set-font (18px; 30px; @color: @light-font-color; @font-weight: bold; @text-transform: uppercase);
+  }
+}
