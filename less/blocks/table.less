@@ -1,0 +1,74 @@
+.table {
+  .set-background (@color: @light-background-color);
+  .set-font (@line-height: 30px; @color: @dark-font-color; @text-transform: uppercase);
+  border-collapse: collapse;
+
+  &__header {
+    border-bottom: 2px solid @dark-font-color;
+    border-radius: 2px;
+  }
+
+  &__body {
+    border: 2px solid @neutral-color;
+    border-radius: 1px;
+  }
+
+  &__cell {
+    border: 2px solid @neutral-color;
+  }
+
+  &__heading-cell {
+    .set-background (@color: @dark-background-color);
+    .set-font (18px; 30px; @color: @light-font-color);
+    padding-bottom: 7px;
+    width: 25%;
+    border-left: 2px solid @neutral-color;
+  }
+    &__heading-cell--rate {
+    text-transform: uppercase;
+    padding: 12px 0 0;
+    font-weight: bold;
+  }
+
+  &__heading-cell--price {
+    font-size: 24px;
+  }
+
+  &__heading-cell--empty {
+    background-color: rgb(242, 242, 242);
+  }
+
+  &__cell--yes {
+    .set-background (@image: url("../img/icon-yes.svg"));
+  }
+
+  &__cell--no {
+    .set-background (@image: url("../img/icon-no.svg"));
+  }
+
+    @media (min-width: @tablet-width) {
+      text-transform: none;
+
+      &__cell {
+        padding: 7px 14px 9px;
+        text-align: left;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      &__heading-cell--rate {
+        padding-top: 18px;
+      }
+
+      &__heading-cell--price {
+        padding-bottom: 18px;
+        font-size: 24px;
+        font-weight: lighter;
+      }
+
+      &__cell {
+        padding: 17px 24px 14px;
+        font-size: 18px;
+      }
+    }
+}

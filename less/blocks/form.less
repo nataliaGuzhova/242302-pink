@@ -1,0 +1,302 @@
+.form {
+  padding: 10px 0;
+
+  &__fieldset {
+    padding: 0;
+  }
+
+  &__legend {
+    background-color: transparent;
+    .set-font (14px; 18px; @color: @select-color; @text-transform: uppercase;);
+    text-align: center;
+    width: 220px;
+  }
+
+  &__label {
+    .set-font (14px; 30px; @color: @select-color; @text-transform: uppercase;);
+    display: block;
+    padding: 0 23px;
+    margin: 15px 0 5px;
+    position: relative;
+  }
+
+  &__label--checkbox,
+  &__label--radio {
+    .set-font (18px; 30px; @color: @dark-font-color;);
+    padding: 0 0 36px 70px;
+  }
+
+  &__label--radio {
+    margin-top: 10px;
+  }
+
+  &__label--checkbox::before,
+  &__label--radio::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -5px;
+    .set-background (@color: @light-background-color);
+    .set-border (2px; @neutral-color);
+    .block-size (35px; 35px);
+  }
+
+  &__label--radio::before {
+    .set-border (2px; @neutral-color; @radius: 50%)
+  }
+
+  &__text {
+    min-width: 280px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+
+    .set-font (18px; 30px; @color: @dark-font-color);
+    .set-border (2px; @color: @neutral-color);
+  }
+
+  &__checkbox,
+  &__radio {
+    display: none;
+    .set-border (2px; @neutral-color);
+  }
+
+  &__textarea {
+    min-width: 280px;
+    .set-font (18px; 30px; @color: @dark-font-color;);
+    resize: none;
+    padding: 15px 20px 0;
+    box-sizing: border-box;
+  }
+
+  &__wrapper {
+    margin: 40px auto 15px;
+    padding-bottom: 10px;
+  }
+
+  &__fieldset--app {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  &__fieldset--wins &__legend {
+    margin-bottom: 0;
+    padding-bottom: 15px;
+  }
+
+  &__submit {
+    width: 100%;
+  }
+
+  &__fieldset--review {
+    margin-bottom: 45px;
+  }
+
+  &__comment {
+    text-align: center;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin: 35px 0 0;
+  }
+
+  &__comment--additional {
+    display: none;
+  }
+
+  &__group {
+    .reset-indent();
+  }
+
+  @media (max-width: @mobile-width-only) {
+    &__legend {
+      margin: 0 auto 10px;
+      padding: 40px 0 20px;
+    }
+
+    &__fieldset {
+      border: none;
+    }
+
+    &__wrapper {
+      .set-background (@color: @neutral-color);
+    }
+
+    &__fieldset--user-contacts &__wrapper {
+      background-color: @light-background-color;
+    }
+
+    &__fieldset--user-contacts &__legend {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    &__group {
+      display: flex;
+      margin: 20px 0 50px;
+    }
+
+    &__fieldset--user-info .form__label {
+      padding: 0 20px 0 0;
+    }
+
+    &__text {
+      flex-grow: 1;
+    }
+
+    &__legend {
+      width: auto;
+    }
+
+    &__fieldset {
+      padding: 37px 0 20px 60px;
+      box-sizing: border-box;
+    }
+
+    &__fieldset--user-info {
+      order: -3;
+      border: none;
+      padding: 0;
+    }
+
+    &__fieldset--app {
+      order: -2;
+      margin-top: 10px;
+    }
+
+    &__fieldset--app &__label,
+    &__fieldset--wins &__label {
+      padding-left: 60px;
+    }
+
+    &__fieldset--user-contacts {
+      order: -1;
+      margin-top: 50px;
+      padding-right: 60px;
+      padding-top: 18px;
+      padding-bottom: 0;
+    }
+
+    &__group--reverse {
+      flex-direction: column-reverse;
+      margin-bottom: 20px;
+    }
+
+    &__group--reverse &__label {
+      margin-top: 10px;
+      padding-left: 15px;
+    }
+
+    &__fieldset--wins {
+      margin-top: 60px;
+      margin-bottom: 45px;
+    }
+
+    &__fieldset--wins &__legend {
+      padding-bottom: 0;
+    }
+
+    &__fieldset--review {
+      padding-right: 60px;
+      padding-bottom: 40px;
+    }
+
+    &__textarea {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    &__submit {
+      width: 300px;
+      margin: 0;
+    }
+
+    &__fieldset--button {
+      margin-top: 20px;
+    }
+
+    &__fieldset--button .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__comment {
+      margin: 0;
+      align-self: center;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 60px;
+
+    &__fieldset--user-info,
+    &__fieldset--app {
+      width: 435px;
+      margin: 0;
+    }
+
+    &__fieldset--user-info &__group {
+      margin-top: 15px;
+    }
+
+    &__fieldset--user-info &__group:last-child {
+      margin-bottom: 0;
+    }
+
+    &__fieldset--app .container {
+      width: auto;
+      padding-left: 75px;
+      padding-top: 40px;
+    }
+
+    &__fieldset--user-contacts {
+      padding-top: 13px;
+    }
+
+    &__fieldset--user-contacts &__wrapper{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0;
+    }
+
+    &__group--reverse {
+      width: 370px;
+      margin-bottom: 0;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 180px;
+    }
+
+    &__fieldset--wins .container {
+      padding-bottom: 0;
+    }
+
+    &__fieldset--wins &__label {
+      margin-top: 12px;
+    }
+
+    &__textarea {
+      height: 7em;
+    }
+
+    &__fieldset--button {
+      width: 100%;
+    }
+
+    &__comment--additional {
+      display: inline;
+    }
+  }
+}

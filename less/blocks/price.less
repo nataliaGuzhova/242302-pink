@@ -1,0 +1,38 @@
+.price {
+  padding-top: 90px;
+  padding-bottom: 45px;
+  text-align: center;
+  .set-background (@color: rgb(242, 242, 242); @image: url("../img/bg-triangle-white.svg"); @background-position: top);
+  .set-background (@color: rgb(242, 242, 242));
+  background-size: contain, auto;
+
+  // disable
+  &__toggle-item {
+    border: 3px solid @neutral-color;
+  }
+  // active
+  &__toggle-item--active {
+    border: 3px solid @dark-font-color;
+    background-color: @light-background-color;
+    .block-size (13px; 13px);
+    box-sizing: border-box;
+  }
+
+  &__table {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 70px;
+
+    &__toggle-list {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 150px;
+    padding-bottom: 95px;
+  }
+}

@@ -1,4 +1,4 @@
-.set-background(@color: @light-background-color; @image: none; @repeat: @default-background-repeat; @background-position: 0% 0%) {
+.set-background(@color: @light-background-color; @image: none; @repeat: @default-background-repeat; @background-position: center) {
   background-color: @color;
   background-image+: @image;
   background-repeat+: @repeat;
@@ -32,13 +32,22 @@
   margin: 0;
 }
 
+.reset-list-style () {
+  .reset-indent ();
+  list-style: none;
+}
+
 .block-size (@width: auto; @height: auto) {
   width: @width;
   height: @height;
 }
 
-.block-pos-absolute (@width: auto; @height: auto; @top: 0; @left: 0) {
-  .block-size (@width; @height);
+.add-element (@top: auto; @bottom: auto; @left: auto; @right: auto; @width: auto; @height: auto) {
+  content: "";
+  position: absolute;
   top: @top;
+  bottom: @bottom;
   left: @left;
+  right: @right;
+  .block-size (@width; @height);
 }
