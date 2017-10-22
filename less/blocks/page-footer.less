@@ -1,0 +1,57 @@
+.page-footer {
+  margin-top: 45px;
+
+  &__copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__copyright--index {
+    display: none;
+  }
+
+  &__text {
+    .set-font (@line-height: 18px);
+    vertical-align: middle;
+
+  }
+
+  @media (min-width: @tablet-width) {
+    //на страницке с фото для таблета надо верхний маргин 20пк примерно
+    &__copyright {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 40px 0;
+    }
+
+    &__copyright--index {
+      display: flex;
+    }
+
+    &__logo-link {
+      align-self: baseline;
+    }
+
+    &__text {
+      display: inline-block;
+      margin: 0 15px 0 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 65px;
+
+    &__copyright {
+      padding-top: 70px;
+    }
+
+    &__text {
+      margin-left: 0;
+      font-size: 18px;
+    }
+  }
+
+  // для формы надо убрать верхний маргин
+}

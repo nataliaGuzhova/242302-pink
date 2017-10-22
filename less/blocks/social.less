@@ -2,6 +2,8 @@
   .reset-indent ();
   list-style: none;
   display: flex;
+  width: 190px;
+  margin: 30px 0 40px;
 
   &__item {
     margin: auto;
@@ -10,7 +12,7 @@
   &__link {
     display: inline-block;
     .set-border (@color: @neutral-color; @radius: 50%);
-    .block-size (50px; 50px);
+    .block-size (45px; 45px);
   }
 
   &__link--twitter {
@@ -23,5 +25,14 @@
 
   &__link--youtube {
     .set-background (@color: transparent; @image: url("../img/icon-youtube.svg"); @background-position: center);
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: auto;
+    justify-content: space-between;
+
+    &__item {
+      margin: 0;
+    }
   }
 }
