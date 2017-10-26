@@ -3,40 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <!--  page-header--open-menu -->
     <header class="page-header page-header--index">
-      <div class="page-header__wrapper">
-        <div class="page-header__container container">
-          <a class="page-header__logo">
-            <img class="page-header__logo-image" src="./img/logo-pink-white-mobile.svg" width="74" height="22" alt="Приложение Пинк">
+      <div class="page-header__navigation">
+        <nav class="page-header__main-nav main-nav main-nav--open main-nav--nojs">
+          <a class="main-nav__logo">
+            <img class="main-nav__logo-image" src="./img/logo-pink-white-mobile.svg" width="74" height="22" alt="Приложение Пинк">
           </a>
 
-          <nav class="main-nav">
-            <button class="main-nav__toggle" type="button">
-              <span class="visually-hidden">Открыть меню<span>
-            </button>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню<span>
+          </button>
 
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link">Главная</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="photo.html">Фотографии</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="form.html">Конкурс</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="#">HTML Academy</a>
-              </li>
-            </ul>
-          </nav>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="photo.html">Фотографии</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Конкурс</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
 
-          <h1 class="visually-hidden">Пинк - приложение для редактирования фотографий</h1>
-        </div>
+        <h1 class="visually-hidden">Пинк - приложение для редактирования фотографий</h1>
       </div>
 
       <section class="app-markets">
@@ -165,78 +163,10 @@
       </section>
 
       <section class="price">
-        <div class="container">
+        <div class="price__wrapper">
           <h2 class="visually-hidden">Тарифы</h2>
 
-          <div class="price__content slider">
-            <!-- Пока вообще не понимаю как верстать этот блок как слайдер, с учетом того что на полях видны соседние ячейки таблицы -->
-            <div class="price__table slider__item slider__item--rate-1">
-              <table class="price__table table">
-
-                <col class="table__column table__column--1">
-                <col class="table__column table__column--2">
-                <col class="table__column table__column--3">
-                <col class="table__column table__column--4">
-
-                <thead class="table__header">
-                  <tr class="table__row">
-                    <th class="table__heading-cell table__heading-cell--empty"></th>
-                    <th class="table__heading-cell table__heading-cell--rate">База</th>
-                    <th class="table__heading-cell table__heading-cell--rate">Стандарт</th>
-                    <th class="table__heading-cell table__heading-cell--rate">Анлим</th>
-                  </tr>
-
-                  <tr class="table__row">
-                    <th class="table__heading-cell table__heading-cell--empty"></th>
-                    <th class="table__heading-cell table__heading-cell--price">1,99 USD</th>
-                    <th class="table__heading-cell table__heading-cell--price">3,99 USD</th>
-                    <th class="table__heading-cell table__heading-cell--price">9,99 USD</th>
-                  </tr>
-                </thead>
-
-                <tbody class="table__body">
-                  <tr class="table__row">
-                    <td class="table__cell">Розовый фильтр</td>
-                    <td class="table__cell table__cell--yes">
-                      <span class="visually-hidden">Да</span>
-                    </td>
-                    <td class="table__cell table__cell--yes">
-                      <span class="visually-hidden">Да</span>
-                    </td>
-                    <td class="table__cell table__cell--yes">
-                      <span class="visually-hidden">Да</span>
-                    </td>
-                  </tr>
-
-                  <tr class="table__row">
-                    <td class="table__cell">Смайлики</td>
-                    <td class="table__cell table__cell--no">
-                      <span class="visually-hidden">Нет</span>
-                    </td>
-                    <td class="table__cell table__cell--yes">
-                      <span class="visually-hidden">Да</span>
-                    </td>
-                    <td class="table__cell table__cell--yes">
-                      <span class="visually-hidden">Да</span>
-                    </td>
-                  </tr>
-
-                  <tr class="table__row">
-                    <td class="table__cell">Комментарии</td>
-                    <td class="table__cell table__cell--no">
-                      <span class="visually-hidden">Нет</span>
-                    </td>
-                    <td class="table__cell table__cell--no">
-                      <span class="visually-hidden">Нет</span>
-                    </td>
-                    <td class="table__cell table__cell--yes">
-                      <span class="visually-hidden">Да</span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
+          <div class="price__slider slider">
             <input class="price__control slider__control" type="radio" id="rate-1" name="price__control" value="rate-1">
             <input class="price__control slider__control" type="radio" id="rate-2" name="price__control" value="rate-2" checked>
             <input class="price__control slider__control" type="radio" id="rate-3" name="price__control" value="rate-3">
@@ -251,6 +181,77 @@
               <label class="price__toggle-item slider__toggle-item" for="rate-3">
                 <span class="visually-hidden">NoN</span>
               </label>
+            </div>
+
+            <div class="price__content ">
+              <table class="price__table table">
+
+                <thead class="table__header">
+                  <tr class="table__row">
+                    <th class="table__heading-cell table__cell--col1 table__heading-cell--empty"></th>
+                    <th class="table__heading-cell table__heading-cell--rate table__cell--col2">База</th>
+                    <th class="table__heading-cell table__heading-cell--rate table__cell--col3">Стандарт</th>
+                    <th class="table__heading-cell table__heading-cell--rate table__cell--col4">Анлим</th>
+                  </tr>
+
+                  <tr class="table__row">
+                    <th class="table__heading-cell table__cell--col1 table__heading-cell--empty"></th>
+                    <th class="table__heading-cell table__heading-cell--price table__cell--col2">1,99 USD</th>
+                    <th class="table__heading-cell table__heading-cell--price table__cell--col3">3,99 USD</th>
+                    <th class="table__heading-cell table__heading-cell--price table__cell--col4">9,99 USD</th>
+                  </tr>
+                </thead>
+
+                <tbody class="table__body">
+                  <tr class="table__row">
+                    <td class="table__cell table__cell--col1">Розовый фильтр</td>
+                    <td class="table__cell table__cell--col2">
+                      <span class="table__sign">Розовый фильтр</span>
+                      <img class="table__img" src="./img/icon-yes.svg" width="33px" height="22px" alt="Да">
+                    </td>
+                    <td class="table__cell table__cell--col3">
+                      <span class="table__sign">Розовый фильтр</span>
+                      <img class="table__img" src="./img/icon-yes.svg" width="33px" height="22px" alt="Да">
+                    </td>
+                    <td class="table__cell table__cell--col4">
+                      <span class="table__sign">Розовый фильтр</span>
+                      <img class="table__img" src="./img/icon-yes.svg" width="33px" height="22px" alt="Да">
+                    </td>
+                  </tr>
+
+                  <tr class="table__row">
+                    <td class="table__cell table__cell--col1">Смайлики</td>
+                    <td class="table__cell table__cell--col2">
+                      <span class="table__sign">Смайлики</span>
+                      <img class="table__img" src="./img/icon-no.svg" width="28px" height="28px" alt="Нет">
+                    </td>
+                    <td class="table__cell table__cell--col3">
+                      <span class="table__sign">Смайлики</span>
+                      <img class="table__img" src="./img/icon-yes.svg" width="33px" height="22px" alt="Да">
+                    </td>
+                    <td class="table__cell table__cell--col4">
+                      <span class="table__sign">Смайлики</span>
+                      <img class="table__img" src="./img/icon-yes.svg" width="33px" height="22px" alt="Да">
+                    </td>
+                  </tr>
+
+                  <tr class="table__row">
+                    <td class="table__cell table__cell--col1">Комментарии</td>
+                    <td class="table__cell table__cell--col2">
+                      <span class="table__sign">Комментарии</span>
+                      <img class="table__img" src="./img/icon-no.svg" width="28px" height="28px" alt="Нет">
+                    </td>
+                    <td class="table__cell table__cell--col3">
+                      <span class="table__sign">Комментарии</span>
+                      <img class="table__img" src="./img/icon-no.svg" width="28px" height="28px" alt="Нет">
+                    </td>
+                    <td class="table__cell table__cell--col4">
+                      <span class="table__sign">Комментарии</span>
+                      <img class="table__img" src="./img/icon-yes.svg" width="33px" height="22px" alt="Да">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -326,5 +327,8 @@
         </section>
       </div>
     </footer>
+
+    <script type="text/javascript" src="./js/main-nav-toggle.js">
+    </script>
   </body>
 </html>

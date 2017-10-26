@@ -4,17 +4,10 @@
 
   &__text {
     margin: 0;
-    // margin: 50px 0;
     padding: 50px 0 10px;
     line-height: 30px;
     text-align: center;
   }
-  // &__text {
-  //   margin: 0;
-  //   padding: 45px 0 50px;
-  //   .set-font (14px; 30px; @color: @dark-font-color);
-  //   text-align: center;
-  // }
 
   &__icon {
     color: @select-color;
@@ -25,6 +18,7 @@
   }
 
   @media (min-width: @tablet-width) {
+
     &__text {
       font-size: 18px;
       width: 500px;
@@ -36,24 +30,21 @@
       display: block;
       margin: 0 auto;
     }
-    //
-    // &__container {
-    //   width: 640px;
-    //   margin: 0 auto;
-    // }
   }
 
   @media (min-width: @desktop-width) {
+
     &__text {
       width: 800px;
     }
+
     &__text--for-form {
       display: inline-block;
     }
-    //
-    // &__container {
-    //   width: 940px;
-    //   margin: 0 auto;
-    // }
+
+    &__form {
+      width: 940px;
+      margin: 0 auto;
+    }
   }
 }

@@ -1,7 +1,7 @@
 .button {
   margin: 0;
   display: block;
-  min-width: 260px;
+  // min-width: 260px;
   .set-background (@color: transparent);
   .set-font(18px; 18px; @color: inherit; @font-weight: bold);
   text-align: center;
@@ -13,6 +13,7 @@
 
   &--submit {
     .set-border-color (@color: @select-color);
+    color: @select-color;
   }
 
   &--reset {

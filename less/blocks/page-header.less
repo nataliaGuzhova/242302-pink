@@ -1,79 +1,81 @@
 .page-header {
-  min-height: 235px;
-  position: relative;
-  text-align: center;
-  position: relative;
-
   .set-background(@color: @dark-background-color; @image: @header-background-image);
   background-size: cover;
-
-  &__container {
-    display: flex;
-  }
-
-  &--menu-open {
-    padding: 0 0 347px;
-  }
-
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    min-height: 65px;
-    background-color: rgba(29, 38, 50, 0.3);
-  }
+  text-align: center;
 
   &--index {
-    min-height: 460px;
-    margin-bottom: 272px;
     .set-background(@color: @dark-background-color; @image: url("../img/iphone-hand-mobile@1x.png"); @background-position: 50% 40%);
     .set-background(@color: @dark-background-color; @image: @header-background-image);
-
     background-size: auto, cover;
   }
+}
 
-  &__logo {
-    align-self: flex-start;
-    padding: 0;
-    cursor: pointer;
+.page-header__title {
+  margin: 0;
+  padding: 35px 0 55px;
+  .set-font (24px; 1.2; @color: @light-font-color; @font-weight: lighter);
+
+  &--photo {
+    padding-bottom: 80px;
   }
+}
+  //
+  // @media (min-width: @tablet-width) {
+    // min-height: 400px;
+    // margin-bottom: 0;
 
-  &__title {
-    // margin: 35px 0 80px;
-    margin: 0;
-    padding: 35px 0;
-    .set-font (24px; 1.2; @color: @light-font-color; @font-weight: lighter);
+    // &__wrapper {
+    //   min-height: 110px;
+    //   width: @tablet-width;
+    // }
+    //
+    // &__logo {
+    //   padding: 0 0 0 70px;
+    //   align-self: center;
+    // }
+  //
+  //   &__title {
+  //     padding: 68px 0;
+  //     font-size: 50px;
+  //   }
+  // }
+  //
+
+  // }
+
+
+.page-header__navigation {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__navigation {
   }
-
-  @media (min-width: @tablet-width) {
-    min-height: 400px;
-    margin-bottom: 0;
-
-    &--index {
-      min-height: 730px;
-      background-position: bottom, bottom;
-    }
-
-    &__wrapper {
-      min-height: 110px;
-    }
-
-    &__logo {
-      padding: 0 0 0 70px;
-      align-self: center;
-    }
-
-    &__title {
-      padding: 68px 0;
+  .page-header__title {
+    // 160px вниз
+      padding: 68px 0 80px;
       font-size: 50px;
+
+      &--photo {
+        padding-bottom: 140px;
+      }
     }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    padding-bottom: 55px
+  }
+  .page-header__navigation {
+    padding: 25px 0;
   }
 
-  @media (min-width: @desktop-width) {
-    &--index {
-      min-height: 850px;
-      background-size: auto, cover;
-    }
+  .page-header__main-nav {
+    width: 940px;
+    margin: 0 auto;
   }
+
+  .page-header__title {
+      padding: 63px 0 47px;
+    }
 }
