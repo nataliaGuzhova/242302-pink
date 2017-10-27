@@ -1,44 +1,44 @@
 .slider {
   position: relative;
+}
 
-  &__control {
-    display: none;
-  }
+.slider__control {
+  display: none;
+}
 
-    &__toggle-list {
-    .block-size (65px; 13px);
-    display: flex;
-    justify-content: space-between;
-    margin: 33px auto 0;
-  }
-  // disable
-  &__toggle-item {
-    border: 3px solid @light-background-color;
-    background-color: rgb(185, 189, 193);
-    border-radius: 50%;
-    .block-size (13px; 13px);
-    box-sizing: border-box;
-  }
-  // active
-    &__toggle-item--active {
-      border: 3px solid @dark-font-color;
-      border-radius: 50%;
-      background-color: @light-background-color;
-      .block-size (13px; 13px);
-      box-sizing: border-box;
-    }
+.slider__toggle-list {
+  .block-size (65px; 13px);
+  display: flex;
+  justify-content: space-between;
+  margin: 33px auto 0;
+}
+// disable
+.slider__toggle-item {
+  border: 3px solid @light-background-color;
+  background-color: rgb(185, 189, 193);
+  border-radius: 50%;
+  .block-size (13px; 13px);
+  box-sizing: border-box;
+}
+// active
+.slider__toggle-item--active {
+  border: 3px solid @dark-font-color;
+  border-radius: 50%;
+  background-color: @light-background-color;
+  .block-size (13px; 13px);
+  box-sizing: border-box;
+}
 
-    &__button {
-      position: absolute;
-    }
+.slider__button {
+  position: absolute;
+}
 
-    &__button--prew {
-      top: 0;
-      left: 0;
-    }
+.slider__button--prew {
+  top: 0;
+  left: 0;
+}
 
-    &__button--next {
-      top: 0;
-      right: 0;
-    }
-  }
+.slider__button--next {
+  top: 0;
+  right: 0;
+}

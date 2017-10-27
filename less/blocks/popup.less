@@ -8,78 +8,74 @@
   width: 320px;
   // 780 465 - оба 320
   padding: 45px 0 0;
+  background-color: @light-background-color;
 
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
-
-  // &--ok {
-  //   display: none;
-  // }
-  //
-  // &--trouble {
-  //   display: none;
-  // }
-
-  &__wrapper {
-    width: auto;
-    margin: 0 auto;
-  }
-
-  &__container {
-    width: 280px;
-    margin: 0 auto;
-  }
-
-  &__title {
-    .set-font (18px; 24px; @color: @black-color; @font-weight: bold);
-    text-align: center;
-    margin: 0;
-  }
-
-  &__text {
-    margin: 30px 0 35px;
-  }
-
-  &__button {
-    width: 100%;
-  }
-
-  &__footer {
-    padding: 50px 0;
-  }
-
-  &__footer--ok {
-    background-color: @neutral-color;
-  }
-
-  &__footer--trouble {
-    padding: 5px 0 50px;
-  }
-
-  @media (min-width: @tablet-width) {
-    width: 460px;
-
-    &__title {
-      font-size: 30px;
-      line-height: 40px;
-    }
-
-    &__text {
-      font-size: 18px;
-    }
-
-    &__container {
-      width: 320px;
-      margin: 0 auto;
-    }
 }
-@media (min-width: @desktop-width) {
-    &--ok {
-      width: 780px;
-      margin: 0 auto;
-    }
 
-    &--ok &__container {
-      width: 460px;
-    }
+.popup__wrapper {
+  width: auto;
+  margin: 0 auto;
+}
+
+.popup__container {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.popup__title {
+  .set-font (18px; 24px; @color: @black-color; @font-weight: bold);
+  text-align: center;
+  margin: 0;
+}
+
+.popup__text {
+  margin: 30px 0 35px;
+}
+
+.popup__button {
+  width: 100%;
+}
+
+.popup__footer {
+  padding: 50px 0;
+}
+
+.popup__footer--ok {
+  background-color: @neutral-color;
+}
+
+.popup__footer--trouble {
+  padding: 5px 0 50px;
+}
+
+@media (min-width: @tablet-width) {
+  .popup {
+    width: 460px;
+  }
+
+  .popup__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .popup__text {
+    font-size: 18px;
+  }
+
+  .popup__container {
+    width: 320px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .popup--ok {
+    width: 780px;
+    margin: 0 auto;
+  }
+
+  .popup--ok .popup__container {
+    width: 460px;
   }
 }

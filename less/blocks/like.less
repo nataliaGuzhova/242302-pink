@@ -1,9 +1,38 @@
+.like__button {
+  .reset-indent ();
+  .set-background (@color: transparent; @image: url("../img/icon-heart.svg"));
+  .block-size (13px; 12px);
+  border: none;
+}
+
+.like__text {
+  padding-left: 16px;
+  .set-font (@size: 12px; @color: @select-color; @text-transform: uppercase);
+}
+
 .like {
-  &__button {
-    .reset-indent ();
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .like {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  &__text {
-    .set-font (@size: 12px; @color: @select-color; @text-transform: uppercase);
+  .like__text {
+    padding-left: 0;
+    order: -1;
+  }
+
+  .gallery__item--day-photo .like {
+    margin: 0;
+  }
+
+  .gallery__item--day-photo .like__text {
+    padding: 0;
+    width: 100px;
   }
 }

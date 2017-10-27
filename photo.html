@@ -3,42 +3,41 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк - фотографии</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <!--  page-header--open-menu -->
     <header class="page-header">
-      <div class="page-header__wrapper">
-        <div class="page-header__container container">
-          <a class="page-header__logo">
-            <img class="page-header__logo-image" src="./img/logo-pink-white-mobile.svg" width="74" height="22" alt="Приложение Пинк">
+      <div class="page-header__navigation">
+        <nav class="page-header__main-nav main-nav main-nav--closed main-nav--nojs">
+          <a class="main-nav__logo" href="index.html">
+            <img class="main-nav__logo-image" src="./img/logo-pink-white-mobile.svg" width="74" height="22" alt="Приложение Пинк">
           </a>
 
-          <nav class="main-nav">
-            <button class="main-nav__toggle" type="button">
-              <span class="visually-hidden">Открыть меню<span>
-            </button>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
 
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="index.html">Главная</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link">Фотографии</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="form.html">Конкурс</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="#">HTML Academy</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link">Фотографии</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Конкурс</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
       </div>
 
       <div class="container">
-        <h1 class="page-header__title">Фотографии пользователей</h1>
+        <h1 class="page-header__title page-header__title--photo">Фотографии<br>пользователей</h1>
       </div>
     </header>
 
@@ -48,25 +47,26 @@
           <div class="container">
             <h2 class="visually-hidden">Галлерея фотографий пользователей</h2>
             <p class="gallery__text page-main__text">Взгляните на фотографии, которые выкладывают пользователи!
-              Видите,&nbsp;как не хватает ваших?</p>
+              Видите,&nbsp;как&nbsp;не хватает ваших?</p>
           </div>
         </div>
 
-        <div class="container">
-          <ul class="gallery__list">
-            <li class="gallery__item">
-              <article class="gallery__photo photo gallery__photo--main">
-                <!-- [] Валидатор ругается предупреждением на несколько h1 на странице-->
-                <h1 class="visually-hidden">Панорама</h1>
+        <ul class="gallery__list">
+          <li class="gallery__item gallery__item--day-photo">
+            <article class="gallery__photo photo photo--day-photo">
+              <!-- [] Валидатор ругается предупреждением на несколько h1 на странице-->
+              <h1 class="visually-hidden">Панорама</h1>
 
-                <a class="photo__image" href="#">
-                  <img src="./img/panorama-mobile@1x.jpg" width="320" height="138" alt="Панорама">
-                </a>
+              <a class="photo__image" href="#">
+                <img src="./img/panorama-mobile@1x.jpg" width="100%" height="auto" alt="Панорама">
+              </a>
 
-                <blockquote class="photo__description">
+              <div class="photo__container">
+                <p class="photo__copyright">
                   <cite class="photo__author">Анна</cite>
                   <time class="photo__time" datetime="2017-09-27">(5 минут назад)</time>
-
+                </p>
+                <blockquote class="photo__description">
                   <p class="photo__text">Прыгать или нет? Напишите в коментарии
                     свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
                 </blockquote>
@@ -75,28 +75,34 @@
                   <button class="like__button" type="button"></button>
                   <span class="like__text">Нравится: 215</span>
                 </p>
-              </article>
-            </li>
+              </div>
+            </article>
+          </li>
+        </ul>
 
+        <div class="container">
+          <ul class="gallery__list">
             <li class="gallery__item">
               <article class="gallery__photo photo">
                 <h1 class="visually-hidden">Авто</h1>
 
                 <a class="photo__image" href="#">
-                  <img src="./img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Авто">
+                  <img src="./img/photo-car-mobile@1x.jpg" width="100%" height="auto" alt="Авто">
                 </a>
 
-                <blockquote class="photo__description">
-                  <cite class="photo__author">Левон</cite>
-                  <time class="photo__time" datetime="2017-09-27">(5 часов назад)</time>
+                <div class="photo__container">
+                  <blockquote class="photo__description">
+                    <cite class="photo__author">Левон</cite>
+                    <time class="photo__time" datetime="2017-09-27">(5 часов назад)</time>
 
-                  <p class="photo__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-                </blockquote>
+                    <p class="photo__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                  </blockquote>
 
-                <p class="photo__like like">
-                  <button class="like__button" type="button"></button>
-                  <span class="like__text">Нравится: 356</span>
-                </p>
+                  <p class="photo__like like">
+                    <button class="like__button" type="button"></button>
+                    <span class="like__text">Нравится: 356</span>
+                  </p>
+                </div>
               </article>
             </li>
 
@@ -105,20 +111,22 @@
                 <h1 class="visually-hidden">Барабаны</h1>
 
                 <a class="photo__image" href="#">
-                  <img src="./img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Барабаны">
+                  <img src="./img/photo-drumset-mobile@1x.jpg" width="100%" height="auto" alt="Барабаны">
                 </a>
 
-                <blockquote class="photo__description">
-                  <cite class="photo__author">Антон</cite>
-                  <time class="photo__time" datetime="2017-09-27">(12 часов назад)</time>
+                <div class="photo__container">
+                  <blockquote class="photo__description">
+                    <cite class="photo__author">Антон</cite>
+                    <time class="photo__time" datetime="2017-09-27">(12 часов назад)</time>
 
-                  <p class="photo__text">Соседи будут рады!</p>
-                </blockquote>
+                    <p class="photo__text">Соседи будут рады!</p>
+                  </blockquote>
 
-                <p class="photo__like like">
-                  <button class="like__button" type="button"></button>
-                  <span class="like__text">Нравится: 666</span>
-                </p>
+                  <p class="photo__like like">
+                    <button class="like__button" type="button"></button>
+                    <span class="like__text">Нравится: 666</span>
+                  </p>
+                </div>
               </article>
             </li>
 
@@ -127,20 +135,22 @@
                 <h1 class="visually-hidden">Небо</h1>
 
                 <a class="photo__image" href="#">
-                  <img src="./img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Небо">
+                  <img src="./img/photo-window-mobile@1x.jpg" width="100%" height="auto" alt="Небо">
                 </a>
 
-                <blockquote class="photo__description">
-                  <cite class="photo__author">Борис</cite>
-                  <time class="photo__time" datetime="2017-09-27">(20 часов назад)</time>
+                <div class="photo__container">
+                  <blockquote class="photo__description">
+                    <cite class="photo__author">Борис</cite>
+                    <time class="photo__time" datetime="2017-09-27">(20 часов назад)</time>
 
-                  <p class="photo__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
-                </blockquote>
+                    <p class="photo__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                  </blockquote>
 
-                <p class="photo__like like">
-                  <button class="like__button" type="button"></button>
-                  <span class="like__text">Нравится: 215</span>
-                </p>
+                  <p class="photo__like like">
+                    <button class="like__button" type="button"></button>
+                    <span class="like__text">Нравится: 215</span>
+                  </p>
+                </div>
               </article>
             </li>
 
@@ -149,20 +159,22 @@
                 <h1 class="visually-hidden">Бахча</h1>
 
                 <a class="photo__image" href="#">
-                  <img src="./img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Бахча">
+                  <img src="./img/photo-fair-mobile@1x.jpg" width="100%" height="auto" alt="Бахча">
                 </a>
 
-                <blockquote class="photo__description">
-                  <cite class="photo__author">Сергей</cite>
-                  <time class="photo__time" datetime="2017-09-27">(25 часов назад)</time>
+                <div class="photo__container">
+                  <blockquote class="photo__description">
+                    <cite class="photo__author">Сергей</cite>
+                    <time class="photo__time" datetime="2017-09-27">(25 часов назад)</time>
 
-                  <p class="photo__text">Самая кубанская в мире!</p>
-                </blockquote>
+                    <p class="photo__text">Самая кубанская в мире!</p>
+                  </blockquote>
 
-                <p class="photo__like like">
-                  <button class="like__button" type="button"></button>
-                  <span class="like__text">Нравится: 4</span>
-                </p>
+                  <p class="photo__like like">
+                    <button class="like__button" type="button"></button>
+                    <span class="like__text">Нравится: 4</span>
+                  </p>
+                </div>
               </article>
             </li>
 
@@ -171,20 +183,22 @@
                 <h1 class="visually-hidden">В поисках снега</h1>
 
                 <a class="photo__image" href="#">
-                  <img src="./img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="В поисках снега">
+                  <img src="./img/photo-pov-mobile@1x.jpg" width="100%" height="auto" alt="В поисках снега">
                 </a>
 
-                <blockquote class="photo__description">
-                  <cite class="photo__author">Максим</cite>
-                  <time class="photo__time" datetime="2017-09-27">(40 часов назад)</time>
+                <div class="photo__container">
+                  <blockquote class="photo__description">
+                    <cite class="photo__author">Максим</cite>
+                    <time class="photo__time" datetime="2017-09-27">(40 часов назад)</time>
 
-                  <p class="photo__text">Где снег-то?</p>
-                </blockquote>
+                    <p class="photo__text">Где снег-то?</p>
+                  </blockquote>
 
-                <p class="photo__like like">
-                  <button class="like__button" type="button"></button>
-                  <span class="like__text">Нравится: 150</span>
-                </p>
+                  <p class="photo__like like">
+                    <button class="like__button" type="button"></button>
+                    <span class="like__text">Нравится: 150</span>
+                  </p>
+                </div>
               </article>
             </li>
 
@@ -193,20 +207,22 @@
                 <h1 class="visually-hidden">Закат</h1>
 
                 <a class="photo__image" href="#">
-                  <img src="./img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Закат">
+                  <img src="./img/photo-wing-mobile@1x.jpg" width="100%" height="auto" alt="Закат">
                 </a>
 
-                <blockquote class="photo__description">
-                  <cite class="photo__author">Надежда</cite>
-                  <time class="photo__time" datetime="2017-09-27">(45 часов назад)</time>
+                <div class="photo__container">
+                  <blockquote class="photo__description">
+                    <cite class="photo__author">Надежда</cite>
+                    <time class="photo__time" datetime="2017-09-27">(45 часов назад)</time>
 
-                  <p class="photo__text">Всем GM и взаимные лайки!</p>
-                </blockquote>
+                    <p class="photo__text">Всем GM и взаимные лайки!</p>
+                  </blockquote>
 
-                <p class="photo__like like">
-                  <button class="like__button" type="button"></button>
-                  <span class="like__text">Нравится: 2560</span>
-                </p>
+                  <p class="photo__like like">
+                    <button class="like__button" type="button"></button>
+                    <span class="like__text">Нравится: 2560</span>
+                  </p>
+                </div>
               </article>
             </li>
           </ul>
@@ -223,63 +239,64 @@
 
         <form class="editor__form" action="action-page.html" method="get">
 <!-- [В] Можно таким образом див внутрь формы записать??-->
-          <div class="container">
-            <img class="editor__image" src="./img/photo-road-mobile@1x.jpg" width="280" height="375" alt="Дорога">
+          <div class="editor__container container">
+            <div class="editor__image">
+            <img src="./img/photo-road-mobile@1x.jpg" width="100%" height="auto" alt="Дорога">
+          </div>
 
-            <ul class="editor__tools">
-              <li class="editor__item editor__item--crop">
-                <input class="editor__control" type="radio" id="crop" name="editor_control" value="crop">
-                <label class="editor__tab editor__tab--active" for="crop">
-                  <img class="editor__label" src="./img/icon-editor-crop.svg" width="45px" height="45px" alt="Обрезать">
-                </label>
+          <div class="editor__wrapper">
+              <ul class="editor__tools">
+                <li class="editor__item editor__item--crop">
+                  <input class="editor__control" type="radio" id="crop" name="editor_control" value="crop">
+                  <label class="editor__tab editor__tab--active" for="crop">
+                    <img class="editor__label" src="./img/icon-editor-crop.svg" width="100%" height="auto" alt="Обрезать">
+                  </label>
 
-                <div class="editor__tab-content">
-                  <div class="editor__scale">
-                    <div class="editor__toggle editor__toggle--crop"></div>
+                  <div class="editor__tab-content">
+                    <div class="editor__scale">
+                      <div class="editor__toggle editor__toggle--crop"></div>
+                    </div>
                   </div>
-                </div>
-              </li>
+                </li>
 
-              <li class="editor__item editor__item--fill">
-                <input class="editor__control" type="radio" id="fill" name="editor_control" value="fill" checked>
-                <label class="editor__tab" for="fill">
-                  <img class="editor__label" src="./img/icon-editor-fill.svg" width="45px" height="45px" alt="Изменить цвет">
-                </label>
+                <li class="editor__item editor__item--fill">
+                  <input class="editor__control" type="radio" id="fill" name="editor_control" value="fill" checked>
+                  <label class="editor__tab" for="fill">
+                    <img class="editor__label" src="./img/icon-editor-fill.svg" width="100%" height="auto" alt="Изменить цвет">
+                  </label>
 
-                <div class="editor__tab-content">
-                  <div class="editor__scale">
-                    <div class="editor__toggle editor__toggle--fill"></div>
+                  <div class="editor__tab-content">
+                    <div class="editor__scale">
+                      <div class="editor__toggle editor__toggle--fill"></div>
+                    </div>
                   </div>
-                </div>
-              </li>
+                </li>
 
-              <li class="editor__item editor__item--contrast">
-                <input class="editor__control" type="radio" id="contrast" name="editor_control" value="contrast">
-                <label class="editor__tab" for="contrast">
-                  <img class="editor__label" src="./img/icon-editor-contrast.svg" width="35px" height="35px" alt="Изменить контраст">
-                </label>
+                <li class="editor__item editor__item--contrast">
+                  <input class="editor__control" type="radio" id="contrast" name="editor_control" value="contrast">
+                  <label class="editor__tab" for="contrast">
+                    <img class="editor__label" src="./img/icon-editor-contrast.svg" width="80%" height="auto" alt="Изменить контраст">
+                  </label>
 
-                <div class="editor__tab-content">
-                  <div class="editor__scale">
-                    <div class="editor__toggle editor__toggle--contrast"></div>
+                  <div class="editor__tab-content">
+                    <div class="editor__scale">
+                      <div class="editor__toggle editor__toggle--contrast"></div>
+                    </div>
                   </div>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
 
-            <hr class="editor__border">
-            <fieldset class="editor__fieldset">
-              <button class="editor__button button button--rounded button
-
-              " type="submit">Запостить</button>
-              <button class="editor__button button button--rounded button--reset" type="reset">Отмена</button>
-            </fieldset>
+              <fieldset class="editor__fieldset">
+                <button class="editor__button button button--rounded button--submit" type="submit">Запостить</button>
+                <button class="editor__button button button--rounded button--reset" type="reset">Отмена</button>
+              </fieldset>
+            </div>
           </div>
         </form>
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer page-footer--photo">
       <div class="container">
         <section  class="page-footer__copyright">
           <a class="page-footer__logo-link" href="index.html">
@@ -315,5 +332,8 @@
         </div>
       </section>
     </footer>
+
+    <script type="text/javascript" src="./js/main-nav-toggle.js">
+    </script>
   </body>
 </html>

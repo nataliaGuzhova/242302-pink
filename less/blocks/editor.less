@@ -1,166 +1,248 @@
-.editor {
+.editor__form {
+  .set-background (@color: rgb(242, 242, 242));
+}
 
-  &__form {
-    padding: 20px 0 0;
-    .set-background (@color: rgb(242, 242, 242));
-  }
+.editor__container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
 
-  &__tools {
-    margin: 0 0;
-    padding: 0 20px;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-  }
+.editor__tools {
+  list-style: none;
+  padding: 35px 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
 
-  &__item {
-    .set-background (@color: transparent);
-  }
+.editor__control {
+  display: none;
+}
 
-  &__control {
+.editor__item {
+  width: 45px;
+  .set-background (@color: transparent);
+}
+
+.editor__scale {
+  height: 2px;
+  position: relative;
+  background-color: rgb(0, 0, 0);
+}
+
+.editor__toggle {
+  position: absolute;
+  top: -7px;
+  display: inline-block;
+  .block-size (10px; 10px);
+  .set-border (2px; @select-color; @radius: 50%);
+  background-color: @neutral-color;
+}
+
+.editor__toggle--crop {
+  left: 60px;
+}
+
+.editor__toggle--fill {
+  right: 32px;
+}
+
+.editor__toggle--contrast {
+  right: 32px;
+}
+
+.editor__fieldset {
+  border: none;
+  padding: 0;
+  margin-top: 70px;
+}
+
+.editor__button {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.editor__text {
+  padding-top: 20px;
+  padding-bottom: 42px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+@media (max-width: @mobile-width-only) {
+  .editor__tab-content {
     display: none;
-  }
-
-  &__scale {
-    // .block-size (240px; 2px);
-    height: 2px;
-    position: relative;
-    background-color: rgb(0, 0, 0);
-  }
-
-  &__toggle {
     position: absolute;
-    top: -7px;
-    display: inline-block;
-    .block-size (10px; 10px);
-    .set-border (2px; @select-color; @radius: 50%);
-    background-color: @neutral-color;
+    top: 118px;
+    left: 20px;
+    width: 240px;
   }
 
-  &__toggle--crop {
-    left: 60px;
+  .editor__tools {
+    position: relative;
   }
 
-  &__toggle--fill {
-    right: 32px;
-  }
-
-  &__toggle--contrast {
-    right: 32px;
-  }
-
-  &__border {
-    display: none;
-  }
-
-  &__fieldset {
-    border: none;
-    padding: 25px 0 25px;
-  }
-
-  &__button {
-    margin-bottom: 15px;
-    width: 280px;
-  }
-
-  &__text {
-    margin: 20px 0 40px;
-  }
-
-  @media (max-width: @mobile-width-only) {
-    &__tab-content {
-      display: none;
-      position: absolute;
-      top: 35px;
-      left: 40px;
-      width: 240px;
-      // margin: 83px -18px 60px;
-    }
-
-    &__tools {
-      position: relative;
-    }
-
-    &__control:checked ~ &__tab-content {
-      display: block;
-    }
-
-    &__border {
-      color: rgb(221, 223, 224);
-      size: 1px;
-    }
-  }
-
-  @media (min-width: @tablet-width) {
-    &__text {
-      margin: 45px auto 70px;
-      font-size: 18px;
-    }
-
-    &__form {
-      padding-top: 55px;
-    }
-
-    &__image {
-      float: left;
-      margin-right: 45px;
-    }
-
-    &__tools {
-      flex-direction: column;
-      padding-top: 0;
-    }
-
-    &__item {
-      position: relative;
-      border-bottom: 2px solid black;
-      padding: 20px 0 15px;
-    }
-
-    &__item:nth-child(1) {
-      padding-top: 10px;
-    }
-
-    &__label {
-      width: 25px;
-      height: 25px;
-    }
-
-    &__tab-content {
-      display: block;
-      top: 33px;
-      left: 55px;
-      width: 200px;
-    }
-// вложенность????
-    &__item:nth-child(1) > &__tab-content {
-      top: 19px;
-    }
-
-    &__border {
-      display: none;
-    }
-
-    &__fieldset {
-      width: 260px;
-      margin: 45px auto 0;
-    }
-
-    &__button:nth-child(1) {
-      margin-bottom: 25px;
-    }
-
-    &__button {
-      width: 260px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    &__content {
-      width: 290px;
-    }
+  .editor__control:checked ~ .editor__tab-content {
+    display: block;
   }
 }
 
+@media (min-width: @tablet-width) {
+  .editor__text {
+    padding-top: 45px;
+    padding-bottom: 70px;
+  }
 
-// Остановилась на : нарисовать таблицу с фильтрами на стр фотографии и верстать десктоп. Дальше странциу с формой в 3х вариантах
+  .editor .form {
+    margin-bottom: 20px;
+  }
+
+  .editor__container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 55px;
+    padding-bottom: 45px;
+  }
+
+  .editor__image {
+    width: 300px;
+  }
+
+  .editor__wrapper {
+    width: 290px;
+    padding: 0 13px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .editor__tools {
+    display: table;
+    padding: 0;
+    padding-left: 7px;
+  }
+
+  .editor__item {
+    display: table-row;
+  }
+
+  .editor__tab {
+    display: table-cell;
+    width: 50px;
+    height: 65px;
+    border-bottom: 1px solid black;
+    vertical-align: middle;
+  }
+
+  .editor__item--crop .editor__tab {
+    vertical-align: top;
+    padding-top: 10px;
+    height: 55px;
+  }
+
+  .editor__label {
+    display: inline-block;
+    width: 22px;
+  }
+
+  .editor__tab-content {
+    display: table-cell;
+    border-bottom: 1px solid black;
+    width: 205px;
+    vertical-align: middle;
+  }
+
+  .editor__item--crop .editor____tab-content {
+    padding-top: 10px;
+    vertical-align: top;
+  }
+
+  .editor__toggle--crop {
+    left: 147px;
+  }
+
+  .editor__toggle--fill {
+    left: 28px;
+  }
+
+  .editor__toggle--contrast {
+    left: 97px;
+  }
+
+  .editor__button {
+    margin-bottom: 25px;
+  }
+
+  .editor__button:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .editor__text {
+    padding-top: 35px;
+    padding-bottom: 65px;
+  }
+
+  .editor__form {
+    background-color: @light-background-color;
+  }
+
+  .editor__container {
+    background-color: rgb(242, 242, 242);
+    padding: 56px 60px 56px 80px;
+    box-sizing: border-box;
+  }
+
+  .editor__wrapper {
+    width: 410px;
+    padding: 0;
+  }
+
+  .editor__tools {
+    padding: 0;
+    width: 100%;
+  }
+
+  .editor__label {
+    width: 45px;
+  }
+
+  .editor__item--crop .editor__tab {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .editor__item--fill .editor__tab {
+    padding: 13px 0 0;
+  }
+
+  .editor__item--contrast .editor__label {
+    width: 33px;
+    padding: 7px;
+  }
+
+  .editor__tab-content {
+    width: 350px;
+    box-sizing: border-box;
+    padding: 0 30px 0 40px;
+  }
+
+  .editor__button {
+    display: inline-block;
+    width: 183px;
+    margin-bottom: 0;
+  }
+
+  .editor__fieldset {
+    margin-top: 150px;
+    font-size: 0;
+  }
+
+  .editor__button:first-child {
+    margin-right: 40px;
+  }
+}
