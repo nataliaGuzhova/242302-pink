@@ -1,28 +1,27 @@
 .photo {
   .set-background (@color: @neutral-color);
-  // padding-bottom: 20px;
   margin-bottom: 20px;
+}
 
-  &__description {
-    .reset-indent ();
-    padding-bottom: 15px;
-  }
+.photo__description {
+  .reset-indent ();
+  padding-bottom: 15px;
+}
 
-  &__author {
-    .set-font (@font-weight: bold);
-  }
+.photo__author {
+  .set-font (@font-weight: bold);
+}
 
-  &__time {
-    .set-font (@size: 12px; @text-transform: uppercase);
-  }
+.photo__time {
+  .set-font (@size: 12px; @text-transform: uppercase);
+}
 
-  &__text {
-    .reset-indent ();
-  }
+.photo__text {
+  .reset-indent ();
+}
 
-  &__like {
-    .reset-indent ();
-  }
+.photo__like {
+  .reset-indent ();
 }
 
 .photo__copyright {
@@ -46,6 +45,10 @@
   width: 280px;
   margin: 0 auto;
   .set-background (@color: @neutral-color);
+}
+
+.photo__image img {
+  display: block;
 }
 
 @media (min-width: @tablet-width) {

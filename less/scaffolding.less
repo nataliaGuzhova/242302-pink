@@ -1,32 +1,3 @@
-@font-face {
-  font-weight: normal;
-  font-family: "Open Sans";
-  font-style: normal;
-  src: url("fonts/opensans.woff2") format("woff2"), url("fonts/opensans.woff") format("woff");
-}
-
-@font-face {
-  font-weight: bold;
-  font-family: "Open Sans";
-  font-style: normal;
-  src: url("fonts/opensansbold.woff2") format("woff2"), url("fonts/opensansbold.woff") format("woff");
-}
-
-@font-face {
-  font-weight: lighter;
-  font-family: "Open Sans";
-  font-style: normal;
-  src: url("fonts/opensanslight.woff2") format("woff2"), url("fonts/opensanslight.woff") format("woff");
-}
-
-// @-ms-viewport {
-//     width: device-width;
-// }
-//
-// @viewport {
-//     width: device-width;
-// }
-
 body {
   .reset-indent ();
   min-width: 320px;
@@ -37,20 +8,5 @@ body {
 
   @media (min-width: @desktop-width) {
     min-width: 960px;
-  }
-}
-
-.container {
-  margin: 0 auto;
-  width: 280px;
-  padding: 0 20px;
-
-  @media (min-width: @tablet-width) {
-    width: 620px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 940px;
-    padding: 0 10px;
   }
 }

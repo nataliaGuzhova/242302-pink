@@ -4,18 +4,19 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header page-header--index">
       <div class="page-header__navigation">
-        <nav class="page-header__main-nav main-nav main-nav--open main-nav--nojs">
+        <nav class="page-header__main-nav main-nav main-nav--closed main-nav--nojs">
           <a class="main-nav__logo">
             <img class="main-nav__logo-image" src="./img/logo-pink-white-mobile.svg" width="74" height="22" alt="Приложение Пинк">
           </a>
 
           <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню<span>
+            <span class="visually-hidden">Открыть меню</span>
           </button>
 
           <ul class="main-nav__list">
@@ -141,7 +142,7 @@
             </ul>
 
             <button class="reviews__button slider__button slider__button--prew" type="button"><span class="visually-hidden">Предыдущий слайд</span></button>
-            <button class="eviews__button slider__button slider__button--next" type="button"><span class="visually-hidden">Следующий слайд</span></button>
+            <button class="reviews__button slider__button slider__button--next" type="button"><span class="visually-hidden">Следующий слайд</span></button>
 
             <input class="reviews__control slider__control" type="radio" id="review-1" name="reviews__control" value="review-1" checked>
             <input class="reviews__control slider__control" type="radio" id="review-2" name="reviews__control" value="review-2">
@@ -188,14 +189,14 @@
 
                 <thead class="table__header">
                   <tr class="table__row">
-                    <th class="table__heading-cell table__cell--col1 table__heading-cell--empty"></th>
+                    <th class="table__heading-cell table__heading-cell--col1 table__heading-cell--empty"></th>
                     <th class="table__heading-cell table__heading-cell--rate table__cell--col2">База</th>
                     <th class="table__heading-cell table__heading-cell--rate table__cell--col3">Стандарт</th>
                     <th class="table__heading-cell table__heading-cell--rate table__cell--col4">Анлим</th>
                   </tr>
 
                   <tr class="table__row">
-                    <th class="table__heading-cell table__cell--col1 table__heading-cell--empty"></th>
+                    <th class="table__heading-cell table__heading-cell--col1 table__heading-cell--empty"></th>
                     <th class="table__heading-cell table__heading-cell--price table__cell--col2">1,99 USD</th>
                     <th class="table__heading-cell table__heading-cell--price table__cell--col3">3,99 USD</th>
                     <th class="table__heading-cell table__heading-cell--price table__cell--col4">9,99 USD</th>
