@@ -3,112 +3,116 @@
   padding: 30px 0;
   .set-background (@color: @dark-background-color);
   .set-font (@color: @light-background-color);
+}
 
-  &__main-link {
-    margin-bottom: 36px;
-    width: 280px;
+.app-markets__main-link {
+  margin-bottom: 36px;
+  width: 280px;
 
-    box-sizing: border-box;
-    z-index: 1;
-  }
+  box-sizing: border-box;
+  z-index: 1;
+}
 
-  &__list {
-    list-style: none;
-    .reset-indent ();
-    margin-bottom: 12px;
-    padding: 0 40px;
-    display: flex;
-    justify-content: space-between;
-    z-index: 1;
-  }
+.app-markets__list {
+  list-style: none;
+  .reset-indent ();
+  margin-bottom: 12px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
 
-  &__link {
-    display: inline-block;
-    .block-size (46px; 56px);
-  }
+.app-markets__link {
+  display: inline-block;
+  .block-size (46px; 56px);
+}
 
-  &__link--apple {
-    .set-background (@color: transparent; @image: url("../img/logo-apple.svg"));
-  }
+.app-markets__link--apple {
+  .set-background (@color: transparent; @image: url("../img/logo-apple.svg"));
+}
 
-  &__link--android {
-    .set-background (@color: transparent; @image: url("../img/logo-android.svg"));
-  }
+.app-markets__link--android {
+  .set-background (@color: transparent; @image: url("../img/logo-android.svg"));
+}
 
-  &__link--windows {
-    .set-background (@color: transparent; @image: url("../img/logo-microsoft.svg"));
-  }
+.app-markets__link--windows {
+  .set-background (@color: transparent; @image: url("../img/logo-microsoft.svg"));
+}
 
-  &__description {
-    .reset-indent ();
-    min-width: 280px;
-    text-align: center;
-    z-index: 1;
-  }
+.app-markets__description {
+  .reset-indent ();
+  min-width: 280px;
+  text-align: center;
+  z-index: 1;
+}
 
-  &__slogan {
-    display: none;
-    width: 190px;
-    .set-font (40px; 1.2; @color: @light-font-color; @font-weight: lighter);
-    z-index: 1;
-    box-sizing: border-box;
-  }
+.app-markets__slogan {
+  display: none;
+  width: 190px;
+  .set-font (40px; 1.2; @color: @light-font-color; @font-weight: lighter);
+  z-index: 1;
+  box-sizing: border-box;
+}
 
-  @media (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {
+  .app-markets {
     margin: 0;
     padding-top: 58px;
     padding-bottom: 110px;
     background-color: transparent;
-
-    &__container {
-      width: 300px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    &__main-link {
-      width: 100%;
-      margin-bottom: 47px;
-    }
-
-    &__slogan {
-      display: block;
-      margin: 0;
-      padding: 36px 0 32px;
-    }
-
-    &__list {
-      align-self: stretch;
-      // justify-content: space-evenly;
-      justify-content: space-between;
-      padding: 0 48px;
-      margin-bottom: 29px;
-    }
-
-    &__description {
-      font-size: 18px;
-      font-weight: lighter;
-    }
   }
 
-    @media (min-width: @desktop-width) {
-padding-bottom: 68px;
-      &__slogan {
-        width: 300px;
-        font-size: 50px;
-        padding: 50px 0 52px;
-      }
+  .app-markets__container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-      &__main-link {
-        font-size: 21px;
-        line-height: 18px;
-        font-weight: bold;
-        margin-bottom: 70px;
-      }
+  .app-markets__main-link {
+    width: 100%;
+    margin-bottom: 47px;
+  }
 
-      &__list {
-        margin-bottom: 48px;
-      }
-    }
+  .app-markets__slogan {
+    display: block;
+    margin: 0;
+    padding: 36px 0 32px;
+  }
+
+  .app-markets__list {
+    align-self: stretch;
+    justify-content: space-between;
+    padding: 0 48px;
+    margin-bottom: 29px;
+  }
+
+  .app-markets__description {
+    font-size: 18px;
+    font-weight: lighter;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .app-markets {
+    padding-bottom: 68px;
+  }
+
+  .app-markets__slogan {
+    width: 300px;
+    font-size: 50px;
+    padding: 50px 0 52px;
+  }
+
+  .app-markets__main-link {
+    font-size: 21px;
+    line-height: 18px;
+    font-weight: bold;
+    margin-bottom: 70px;
+  }
+
+  .app-markets__list {
+    margin-bottom: 48px;
+  }
 }

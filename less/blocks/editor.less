@@ -74,22 +74,22 @@
 }
 
 @media (max-width: @mobile-width-only) {
-    .editor__tab-content {
-      display: none;
-      position: absolute;
-      top: 118px;
-      left: 20px;
-      width: 240px;
-    }
-
-    .editor__tools {
-      position: relative;
-    }
-
-    .editor__control:checked ~ .editor__tab-content {
-      display: block;
-    }
+  .editor__tab-content {
+    display: none;
+    position: absolute;
+    top: 118px;
+    left: 20px;
+    width: 240px;
   }
+
+  .editor__tools {
+    position: relative;
+  }
+
+  .editor__control:checked ~ .editor__tab-content {
+    display: block;
+  }
+}
 
 @media (min-width: @tablet-width) {
   .editor__text {
@@ -129,19 +129,20 @@
     display: table-row;
   }
 
-.editor__tab {
-  display: table-cell;
-  width: 50px;
-  height: 65px;
-  border-bottom: 1px solid black;
-  vertical-align: middle;
-}
+  .editor__tab {
+    display: table-cell;
+    width: 50px;
+    height: 65px;
+    border-bottom: 1px solid black;
+    vertical-align: middle;
+  }
 
-.editor__item--crop .editor__tab {
-  vertical-align: top;
-  padding-top: 10px;
-  height: 55px;
-}
+  .editor__item--crop .editor__tab {
+    vertical-align: top;
+    padding-top: 10px;
+    height: 55px;
+  }
+
   .editor__label {
     display: inline-block;
     width: 22px;
@@ -163,21 +164,21 @@
       left: 147px;
     }
 
-    .editor__toggle--fill {
-      left: 28px;
-    }
+  .editor__toggle--fill {
+    left: 28px;
+  }
 
-    .editor__toggle--contrast {
-      left: 97px;
-    }
+  .editor__toggle--contrast {
+    left: 97px;
+  }
 
-    .editor__button {
-      margin-bottom: 25px;
-    }
+  .editor__button {
+    margin-bottom: 25px;
+  }
 
-      .editor__button:last-child {
-        margin-bottom: 0;
-      }
+  .editor__button:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: @desktop-width) {

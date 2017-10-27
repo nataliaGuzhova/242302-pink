@@ -1,18 +1,18 @@
 .form {
   padding: 10px 0;
-
-  &__fieldset {
+}
+  .form__fieldset {
     padding: 0;
   }
 
-  &__legend {
+  .form__legend {
     background-color: transparent;
     .set-font (14px; 18px; @color: @select-color; @text-transform: uppercase;);
     text-align: center;
     width: 220px;
   }
 
-  &__label {
+  .form__label {
     .set-font (14px; 30px; @color: @select-color; @text-transform: uppercase;);
     display: block;
     padding: 0 23px;
@@ -20,18 +20,18 @@
     position: relative;
   }
 
-  &__label--checkbox,
-  &__label--radio {
+  .form__label--checkbox,
+  .form__label--radio {
     .set-font (18px; 30px; @color: @dark-font-color;);
     padding: 0 0 36px 70px;
   }
 
-  &__label--radio {
+  .form__label--radio {
     margin-top: 10px;
   }
 
-  &__label--checkbox::before,
-  &__label--radio::before {
+  .form__label--checkbox::before,
+  .form__label--radio::before {
     position: absolute;
     content: "";
     left: 0;
@@ -41,11 +41,11 @@
     .block-size (35px; 35px);
   }
 
-  &__label--radio::before {
+  .form__label--radio::before {
     .set-border (2px; @neutral-color; @radius: 50%)
   }
 
-  &__text {
+  .form__text {
     min-width: 280px;
     box-sizing: border-box;
     padding: 15px 20px;
@@ -54,13 +54,13 @@
     .set-border (2px; @color: @neutral-color);
   }
 
-  &__checkbox,
-  &__radio {
+  .form__checkbox,
+  .form__radio {
     display: none;
     .set-border (2px; @neutral-color);
   }
 
-  &__textarea {
+  .form__textarea {
     min-width: 280px;
     .set-font (18px; 30px; @color: @dark-font-color;);
     resize: none;
@@ -68,239 +68,242 @@
     box-sizing: border-box;
   }
 
-  &__wrapper {
+  .form__wrapper {
     margin: 40px auto 15px;
     padding-bottom: 10px;
   }
 
-  &__fieldset--app {
+  .form__fieldset--app {
     padding-bottom: 0;
     margin-bottom: 0;
   }
 
-  &__fieldset--wins &__legend {
+  .form__fieldset--wins .form__legend {
     margin-bottom: 0;
     padding-bottom: 15px;
   }
 
-  &__submit {
+  .form__submit {
     width: 100%;
   }
 
-  &__fieldset--review {
+  .form__fieldset--review {
     margin-bottom: 45px;
   }
 
-  &__comment {
+  .form__comment {
     text-align: center;
     line-height: 30px;
     text-transform: uppercase;
     margin: 35px 0 0;
   }
 
-  &__comment--additional {
+  .form__comment--additional {
     display: none;
   }
 
-  &__group {
+  .form__group {
     .reset-indent();
   }
 
   @media (max-width: @mobile-width-only) {
-    &__legend {
+    .form__legend {
       margin: 0 auto 10px;
       padding: 40px 0 20px;
     }
 
-    &__fieldset {
+    .form__fieldset {
       border: none;
     }
 
-    &__wrapper {
+    .form__wrapper {
       .set-background (@color: @neutral-color);
     }
 
-    &__fieldset--user-contacts &__wrapper {
+    .form__fieldset--user-contacts .form__wrapper {
       background-color: @light-background-color;
     }
 
-    &__fieldset--user-contacts &__legend {
+    .form__fieldset--user-contacts .form__legend {
       display: none;
     }
   }
 
-  @media (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {
+  .form {
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-
-    &__group {
-      display: flex;
-      margin: 20px 0 50px;
-    }
-
-    &__fieldset--user-info .form__label {
-      padding: 0 20px 0 0;
-    }
-
-    &__text {
-      flex-grow: 1;
-    }
-
-    &__legend {
-      width: auto;
-    }
-
-    &__fieldset {
-      padding: 37px 0 20px 60px;
-      box-sizing: border-box;
-    }
-
-    &__fieldset--user-info {
-      order: -3;
-      border: none;
-      padding: 0;
-    }
-
-    &__fieldset--app {
-      order: -2;
-      margin-top: 10px;
-    }
-
-    &__fieldset--app &__label,
-    &__fieldset--wins &__label {
-      padding-left: 60px;
-    }
-
-    &__fieldset--user-contacts {
-      order: -1;
-      margin-top: 50px;
-      padding-right: 60px;
-      padding-top: 18px;
-      padding-bottom: 0;
-    }
-
-    &__group--reverse {
-      flex-direction: column-reverse;
-      margin-bottom: 20px;
-    }
-
-    &__group--reverse &__label {
-      margin-top: 10px;
-      padding-left: 15px;
-    }
-
-    &__fieldset--wins {
-      margin-top: 60px;
-      margin-bottom: 45px;
-    }
-
-    &__fieldset--wins &__legend {
-      padding-bottom: 0;
-    }
-
-    &__fieldset--review {
-      padding-right: 60px;
-      padding-bottom: 40px;
-    }
-
-    &__textarea {
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    &__submit {
-      width: 300px;
-      margin: 0;
-    }
-
-    &__fieldset--button {
-      margin-top: 20px;
-    }
-
-    &__fieldset--button .container {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    &__comment {
-      margin: 0;
-      align-self: center;
-    }
   }
 
-  @media (min-width: @desktop-width) {
+  .form__group {
+    display: flex;
+    margin: 20px 0 50px;
+  }
+
+  .form__fieldset--user-info .form__label {
+    padding: 0 20px 0 0;
+  }
+
+  .form__text {
+    flex-grow: 1;
+  }
+
+  .form__legend {
+    width: auto;
+  }
+
+  .form__fieldset {
+    padding: 37px 0 20px 60px;
+    box-sizing: border-box;
+  }
+
+  .form__fieldset--user-info {
+    order: -3;
+    border: none;
+    padding: 0;
+  }
+
+  .form__fieldset--app {
+    order: -2;
+    margin-top: 10px;
+  }
+
+  .form__fieldset--app .form__label,
+  .form__fieldset--wins .form__label {
+    padding-left: 60px;
+  }
+
+  .form__fieldset--user-contacts {
+    order: -1;
+    margin-top: 50px;
+    padding-right: 60px;
+    padding-top: 18px;
+    padding-bottom: 0;
+  }
+
+  .form__group--reverse {
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+  }
+
+  .form__group--reverse .form__label {
+    margin-top: 10px;
+    padding-left: 15px;
+  }
+
+  .form__fieldset--wins {
+    margin-top: 60px;
+    margin-bottom: 45px;
+  }
+
+  .form__fieldset--wins .form__legend {
+    padding-bottom: 0;
+  }
+
+  .form__fieldset--review {
+    padding-right: 60px;
+    padding-bottom: 40px;
+  }
+
+  .form__textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form__submit {
+    width: 300px;
+    margin: 0;
+  }
+
+  .form__fieldset--button {
+    margin-top: 20px;
+  }
+
+  .form__fieldset--button .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__comment {
+    margin: 0;
+    align-self: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 60px;
+  }
 
-    &__fieldset--user-info,
-    &__fieldset--app {
-      width: 435px;
-      margin: 0;
-    }
+  .form__fieldset--user-info,
+  .form__fieldset--app {
+    width: 435px;
+    margin: 0;
+  }
 
-    &__fieldset--user-info &__group {
-      margin-top: 15px;
-    }
+  .form__fieldset--user-info .form__group {
+    margin-top: 15px;
+  }
 
-    &__fieldset--user-info &__group:last-child {
-      margin-bottom: 0;
-    }
+  .form__fieldset--user-info .form__group:last-child {
+    margin-bottom: 0;
+  }
 
-    &__fieldset--app .container {
-      width: auto;
-      padding-left: 75px;
-      padding-top: 40px;
-    }
+  .form__fieldset--app .container {
+    width: auto;
+    padding-left: 75px;
+    padding-top: 40px;
+  }
 
-    &__fieldset--user-contacts {
-      padding-top: 13px;
-    }
+  .form__fieldset--user-contacts {
+    padding-top: 13px;
+  }
 
-    &__fieldset--user-contacts &__wrapper{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      margin: 0;
-    }
+  .form__fieldset--user-contacts .form__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+  }
 
-    &__group--reverse {
-      width: 370px;
-      margin-bottom: 0;
-    }
+  .form__group--reverse {
+    width: 370px;
+    margin-bottom: 0;
+  }
 
-    &__container {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      height: 180px;
-    }
+  .form__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 180px;
+  }
 
-    &__fieldset--wins .container {
-      padding-bottom: 0;
-    }
+  .form__fieldset--wins .container {
+    padding-bottom: 0;
+  }
 
-    &__fieldset--wins &__label {
-      margin-top: 12px;
-    }
+  .form__fieldset--wins .form__label {
+    margin-top: 12px;
+  }
 
-    &__textarea {
-      height: 7em;
-    }
+  .form__textarea {
+    height: 7em;
+  }
 
-    &__fieldset--button {
-      width: 100%;
-    }
+  .form__fieldset--button {
+    width: 100%;
+  }
 
-    &__fieldset--button .container {
-      padding: 0 0;
-    }
+  .form__fieldset--button .container {
+    padding: 0 0;
+  }
 
-    &__comment--additional {
-      display: inline;
-    }
+  .form__comment--additional {
+    display: inline;
   }
 }
